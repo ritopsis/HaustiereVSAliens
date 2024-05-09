@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class LobbyUI : MonoBehaviour
 {
     public Text username;
+    private bool clickable = true;
+
     public GameObject LobbyRooms;
     public GameObject LobbyCreation;
     public GameObject MyLobby;
@@ -123,24 +125,26 @@ public class LobbyUI : MonoBehaviour
     }
     public void UpdatePlayerCharacter(string Text) //to switch between factions
     {
-        LobbyManager.PlayerCharacter character = LobbyManager.PlayerCharacter.Haustiere;
-        if (Text == "Aliens")
+        if(clickable)
         {
-            character = LobbyManager.PlayerCharacter.Aliens;
-        }
-        foreach (var players in LobbyManager.instance.activeLobby.Players)
-        {
-            if(players.Id == LobbyManager.instance.playerid)
+            LobbyManager.PlayerCharacter character = LobbyManager.PlayerCharacter.Haustiere;
+            if (Text == "Aliens")
             {
-                if(players.Data[LobbyManager.KEY_USERNAME].Value.ToString() != character.ToString())
+                character = LobbyManager.PlayerCharacter.Aliens;
+            }
+            foreach (var players in LobbyManager.instance.activeLobby.Players)
+            {
+                if (players.Id == LobbyManager.instance.playerId)
                 {
-                    LobbyManager.instance.UpdatePlayerCharacter(character);
-                    break;
+                    if (players.Data[LobbyManager.KEY_USERNAME].Value.ToString() != character.ToString())
+                    {
+                        LobbyManager.instance.UpdatePlayerCharacter(character);
+                        break;
+                    }
                 }
             }
+            UpdatePlayerUI();
         }
-        UpdatePlayerUI();
-
     }
     public void KickPlayer() //kick player as host of the lobby
     {
@@ -148,72 +152,86 @@ public class LobbyUI : MonoBehaviour
     }
     public void UpdatePlayerUI()
     {
-        Hide(Player1Haustiere);
-        Hide(Player1Aliens);
-        Hide(Player2Haustiere);
-        Hide(Player2Aliens);
-        Hide(Player2HaustiereKick);
-        Hide(Player2AliensKick);
-        int count = 1;
-        Text lobbyname = MyLobby.transform.Find("Name").GetComponent<Text>();
-        if (lobbyname != null)
+        if(LobbyManager.instance.activeLobby != null)
         {
-            lobbyname.text = LobbyManager.instance.activeLobby.Name;
+            Hide(Player1Haustiere);
+            Hide(Player1Aliens);
+            Hide(Player2Haustiere);
+            Hide(Player2Aliens);
+            Hide(Player2HaustiereKick);
+            Hide(Player2AliensKick);
+            int count = 1;
+            Text lobbyname = MyLobby.transform.Find("Name").GetComponent<Text>();
+            if (lobbyname != null)
+            {
+                lobbyname.text = LobbyManager.instance.activeLobby.Name;
+            }
+            foreach (Player player in LobbyManager.instance.activeLobby.Players)
+            {
+                if (count == 1)
+                {
+                    if (player.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value.ToString() == LobbyManager.PlayerCharacter.Haustiere.ToString())
+                    {
+                        Text childText = Player1Haustiere.transform.Find("Name").GetComponent<Text>();
+                        if (childText != null)
+                        {
+                            childText.text = player.Data[LobbyManager.KEY_USERNAME].Value.ToString();
+                        }
+                        Show(Player1Haustiere);
+                    }
+                    else
+                    {
+                        Text childText = Player1Aliens.transform.Find("Name").GetComponent<Text>();
+                        if (childText != null)
+                        {
+                            childText.text = player.Data[LobbyManager.KEY_USERNAME].Value.ToString();
+                        }
+                        Show(Player1Aliens);
+                    }
+                    count++;
+                }
+                else
+                {
+                    if (player.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value.ToString() == LobbyManager.PlayerCharacter.Haustiere.ToString())
+                    {
+                        Text childText = Player2Haustiere.transform.Find("Name").GetComponent<Text>();
+                        if (childText != null)
+                        {
+                            childText.text = player.Data[LobbyManager.KEY_USERNAME].Value.ToString();
+                        }
+                        Player2Haustiere.SetActive(true);
+                        if (LobbyManager.instance.IsLobbyHost()) //only host can kick
+                        {
+                            Show(Player2HaustiereKick);
+                        }
+                    }
+                    else
+                    {
+                        Text childText = Player2Aliens.transform.Find("Name").GetComponent<Text>();
+                        if (childText != null)
+                        {
+                            childText.text = player.Data[LobbyManager.KEY_USERNAME].Value.ToString();
+                        }
+                        Player2Aliens.SetActive(true);
+                        if (LobbyManager.instance.IsLobbyHost()) //only host can kick
+                        {
+                            Show(Player2AliensKick);
+                        }
+                    }
+                }
+            }
         }
-        foreach (Player player in LobbyManager.instance.activeLobby.Players)
-        {
-            if(count == 1)
+       
+    }
+    public void StartGame()
+    {
+        if (LobbyManager.instance.activeLobby.Players.Count == 2) {
+            clickable = false;
+            if (LobbyManager.instance.activeLobby.Players[0].Data[LobbyManager.KEY_PLAYER_CHARACTER].Value !=
+                LobbyManager.instance.activeLobby.Players[1].Data[LobbyManager.KEY_PLAYER_CHARACTER].Value)
             {
-                if (player.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value.ToString() == LobbyManager.PlayerCharacter.Haustiere.ToString())
-                {
-                    Text childText = Player1Haustiere.transform.Find("Name").GetComponent<Text>();
-                    if (childText != null)
-                    {
-                        childText.text = player.Data[LobbyManager.KEY_USERNAME].Value.ToString();
-                    }
-                    Show(Player1Haustiere);
-                }
-                else
-                {
-                    Text childText = Player1Aliens.transform.Find("Name").GetComponent<Text>();
-                    if (childText != null)
-                    {
-                        childText.text = player.Data[LobbyManager.KEY_USERNAME].Value.ToString();
-                    }
-                    Show(Player1Aliens);
-                }
-                count++;
+                LobbyManager.instance.StartGame();
             }
-            else
-            {
-                if (player.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value.ToString() == LobbyManager.PlayerCharacter.Haustiere.ToString())
-                {
-                    Text childText = Player2Haustiere.transform.Find("Name").GetComponent<Text>();
-                    if (childText != null)
-                    {
-                        childText.text = player.Data[LobbyManager.KEY_USERNAME].Value.ToString();
-                    }
-                    Player2Haustiere.SetActive(true);
-                    if (LobbyManager.instance.IsLobbyHost()) //only host can kick
-                    {
-                        Show(Player2HaustiereKick);
-                    }
-                }
-                else
-                {
-                    Text childText = Player2Aliens.transform.Find("Name").GetComponent<Text>();
-                    if (childText != null)
-                    {
-                        childText.text = player.Data[LobbyManager.KEY_USERNAME].Value.ToString();
-                    }
-                    Player2Aliens.SetActive(true);
-                    if (LobbyManager.instance.IsLobbyHost()) //only host can kick
-                    {
-                        Show(Player2AliensKick);
-                    }
-                }
-            }
-
         }
     }
     public void Hide(GameObject gameobject)

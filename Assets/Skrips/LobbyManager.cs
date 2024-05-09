@@ -6,6 +6,8 @@ using Unity.Services.Core;
 using Unity.Services.Lobbies;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class LobbyManager : MonoBehaviour
 {
@@ -16,6 +18,7 @@ public class LobbyManager : MonoBehaviour
     }
     public const string KEY_USERNAME = "Username";
     public const string KEY_PLAYER_CHARACTER = "Character";
+    public const string KEY_RELAY = "RelayCode";
 
     public enum PlayerCharacter
     {
@@ -27,13 +30,14 @@ public class LobbyManager : MonoBehaviour
     {
         return new Player(AuthenticationService.Instance.PlayerId, null, new Dictionary<string, PlayerDataObject> {
             { KEY_USERNAME, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, username) },
-            { KEY_PLAYER_CHARACTER, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, PlayerCharacter.Haustiere.ToString()) }
+            { KEY_PLAYER_CHARACTER, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, PlayerCharacter.Haustiere.ToString()) },
+            { KEY_RELAY, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Member, "0") }
         });
     }
 
 
     public string username { get; private set; }
-    public string playerid { get; private set; }
+    public string playerId { get; private set; }
 
     public QueryResponse lobbies { get; private set; } //response of the current lobby request -> to display in UI
     public Lobby activeLobby { get; private set; }
@@ -45,12 +49,18 @@ public class LobbyManager : MonoBehaviour
     private float lobbyPollTimer; //timer to request lobbydata
     private float refreshLobbyListTimer;
 
+    public bool gamestart = false;
 
     private void Update()
     {
         HandleLobbyHeartbeat();
         HandleLobbyPolling();
         //HandleRefreshLobbyList();
+        if (gamestart)
+        {
+            SceneManager.LoadScene("Main");
+            activeLobby = null;
+        }
     }
 
     private async void HandleLobbyHeartbeat()
@@ -67,6 +77,7 @@ public class LobbyManager : MonoBehaviour
         }
     }
 
+    private bool joinrelay = false;
     private async void HandleLobbyPolling()
     {
         if (activeLobby != null)
@@ -79,6 +90,27 @@ public class LobbyManager : MonoBehaviour
 
                 activeLobby = await LobbyService.Instance.GetLobbyAsync(activeLobby.Id);
                 updateUI = true;
+                if (activeLobby.Players[0].Data[KEY_RELAY].Value != "0")
+                {
+                    if (!IsLobbyHost())
+                    {
+                        if(!joinrelay)
+                        {
+                            Relay.JoinRelay(activeLobby.Players[0].Data[KEY_RELAY].Value);
+                            UpdatePlayerOptions options = new UpdatePlayerOptions();
+
+                            options.Data = new Dictionary<string, PlayerDataObject>() {
+                            {
+                               KEY_RELAY, new PlayerDataObject(
+                               visibility: PlayerDataObject.VisibilityOptions.Member,
+                               value: activeLobby.Players[0].Data[KEY_RELAY].Value)}
+                            };
+                            activeLobby = await LobbyService.Instance.UpdatePlayerAsync(activeLobby.Id, playerId, options);
+                            joinrelay = true;
+                        }
+                    }
+                }
+                gamestart = CheckRelay();
             }
         }
     }
@@ -112,7 +144,7 @@ public class LobbyManager : MonoBehaviour
         AuthenticationService.Instance.SignedIn += () => { 
             // Signed in
             Debug.Log("Signed in! " + AuthenticationService.Instance.PlayerId);
-            playerid = AuthenticationService.Instance.PlayerId;
+            playerId = AuthenticationService.Instance.PlayerId;
             ListLobbies();
         };
 
@@ -207,8 +239,6 @@ public class LobbyManager : MonoBehaviour
                     }
                 };
 
-                string playerId = AuthenticationService.Instance.PlayerId;
-
                 Lobby lobby = await LobbyService.Instance.UpdatePlayerAsync(activeLobby.Id, playerId, options);
                 activeLobby = lobby;
                 updateUI = true;
@@ -236,13 +266,13 @@ public class LobbyManager : MonoBehaviour
             }
         }
     }
-    public async void KickPlayer(string playerId)
+    public async void KickPlayer(string kickingplayerId)
     {
         if (IsLobbyHost())
         {
             try
             {
-                await LobbyService.Instance.RemovePlayerAsync(activeLobby.Id, playerId);
+                await LobbyService.Instance.RemovePlayerAsync(activeLobby.Id, kickingplayerId);
             }
             catch (LobbyServiceException e)
             {
@@ -263,5 +293,58 @@ public class LobbyManager : MonoBehaviour
             }
         }
         return false;
+    }
+    public async void StartGame()
+    {
+        if (IsLobbyHost())
+        {
+            try
+            {
+                string relayCode = await Relay.CreateRelay();
+
+                UpdatePlayerOptions options = new UpdatePlayerOptions();
+
+                options.Data = new Dictionary<string, PlayerDataObject>() {
+                    {
+                        KEY_RELAY, new PlayerDataObject(
+                            visibility: PlayerDataObject.VisibilityOptions.Member,
+                            value: relayCode)
+                    }
+                };
+                activeLobby = await LobbyService.Instance.UpdatePlayerAsync(activeLobby.Id, playerId, options);
+            }
+            catch (LobbyServiceException e)
+            {
+                Debug.Log(e);
+            }
+        }
+    }
+    private bool CheckRelay()
+    {
+        bool both = false;
+        foreach (Player player in activeLobby.Players)
+        {
+            if (player.Data[KEY_RELAY].Value != "0")
+            {
+                both = true;
+                if(player.Id == playerId)
+                {
+                    CurrentGame.currentPlayer = player;
+                }
+                else
+                {
+                    CurrentGame.otherPlayer = player;
+                }
+            }
+            else
+            {
+                both = false;
+            }
+        }
+        if (activeLobby.Players.Count != 2)
+        {
+            both = false;
+        }
+        return both;
     }
 }
