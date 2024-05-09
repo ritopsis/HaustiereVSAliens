@@ -8,7 +8,8 @@ public class LobbyUI : MonoBehaviour
     public GameObject LobbyRooms;
     public GameObject LobbyCreation;
     public GameObject MyLobby;
-    
+    public GameObject LobbyFull;
+
     //LobbyRooms
     public GameObject LobbyContent;
     public GameObject Lobbyitem;
@@ -56,8 +57,16 @@ public class LobbyUI : MonoBehaviour
                 joinButton.onClick.AddListener(() =>
                 {
                     LobbyManager.instance.JoinLobbyByIdAsync(lobby);
-                    LobbyRooms.SetActive(false);
-                    MyLobby.SetActive(true);
+                    if(LobbyManager.instance.activeLobby != null)
+                    {
+                        LobbyRooms.SetActive(false);
+                        MyLobby.SetActive(true);
+                    }
+                    else
+                    {
+                        UpdateLobbyRoom();
+                        LobbyFull.SetActive(true);
+                    }
                 });
             }
         }
@@ -84,6 +93,11 @@ public class LobbyUI : MonoBehaviour
         LobbyRooms.SetActive(true);
         MyLobby.SetActive(false);
         LobbyManager.instance.LeaveLobby();   
+    }
+    public void CloseLobbyFull()
+    {
+        LobbyFull.SetActive(false);
+
     }
     public void UpdateLobbyRoom()
     {
