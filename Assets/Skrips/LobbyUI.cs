@@ -18,6 +18,8 @@ public class LobbyUI : MonoBehaviour
     public GameObject Player1Aliens;
     public GameObject Player2Haustiere;
     public GameObject Player2Aliens;
+    public GameObject Player2HaustiereKick;
+    public GameObject Player2AliensKick;
 
 
     private void Awake()
@@ -33,7 +35,33 @@ public class LobbyUI : MonoBehaviour
         if(LobbyManager.instance.updateUI)
         {
             LobbyManager.instance.updateUI = false;
+            StillInLobby();
             UpdatePlayerUI();
+        }
+        if (LobbyManager.instance.lobbyjoining) {
+            LobbyManager.instance.lobbyjoining = false;
+            LobbyJoining();
+        }
+    }
+    public void StillInLobby() //check is player is in lobby -> could be kicked from host
+    {
+        if(!LobbyManager.instance.IsPlayerInLobby()) //is not in lobby anymore
+        {
+            Show(LobbyRooms);
+            Hide(MyLobby);
+        }
+    }
+    public void LobbyJoining() //after player tried joining a lobby
+    {
+        if (LobbyManager.instance.activeLobby != null) //check if the lobby joining was successful
+        {
+            Hide(LobbyRooms);
+            Show(MyLobby);
+        }
+        else //joining was not successful
+        {
+            UpdateLobbyRoom(); //update to show the available lobbyrooms
+            Show(LobbyFull); //UI show that lobby is full
         }
     }
     public void UpdateLobbyUIItems()
@@ -49,7 +77,7 @@ public class LobbyUI : MonoBehaviour
             Text childText = newObject.transform.Find("Name").GetComponent<Text>();
             if (childText != null)
             {
-                childText.text = lobby.Name + lobby.Id;
+                childText.text = lobby.Name;
             }
             Button joinButton = newObject.transform.Find("Join").GetComponent<Button>();
             if (joinButton != null)
@@ -57,16 +85,6 @@ public class LobbyUI : MonoBehaviour
                 joinButton.onClick.AddListener(() =>
                 {
                     LobbyManager.instance.JoinLobbyByIdAsync(lobby);
-                    if(LobbyManager.instance.activeLobby != null)
-                    {
-                        LobbyRooms.SetActive(false);
-                        MyLobby.SetActive(true);
-                    }
-                    else
-                    {
-                        UpdateLobbyRoom();
-                        LobbyFull.SetActive(true);
-                    }
                 });
             }
         }
@@ -74,11 +92,11 @@ public class LobbyUI : MonoBehaviour
     }
     public void OpenLobbyCreation()
     {
-        LobbyCreation.gameObject.SetActive(true);
+        Show(LobbyCreation);
     }
     public void CloseLobbyCreation()
     {
-        LobbyCreation.gameObject.SetActive(false);
+        Hide(LobbyCreation);
     }
     public void CreateLobby(Text lobbyname)
     {
@@ -90,20 +108,20 @@ public class LobbyUI : MonoBehaviour
     }
     public void CloseMyLobby()
     {
-        LobbyRooms.SetActive(true);
-        MyLobby.SetActive(false);
+        Show(LobbyRooms);
+        Hide(MyLobby);
         LobbyManager.instance.LeaveLobby();   
     }
-    public void CloseLobbyFull()
+    public void CloseLobbyFull() //to close the popup "Lobby is already full"
     {
-        LobbyFull.SetActive(false);
+        Hide(LobbyFull);
 
     }
-    public void UpdateLobbyRoom()
+    public void UpdateLobbyRoom() //request current lobbys  
     {
         LobbyManager.instance.ListLobbies();
     }
-    public void UpdatePlayerCharacter(string Text)
+    public void UpdatePlayerCharacter(string Text) //to switch between factions
     {
         LobbyManager.PlayerCharacter character = LobbyManager.PlayerCharacter.Haustiere;
         if (Text == "Aliens")
@@ -124,65 +142,87 @@ public class LobbyUI : MonoBehaviour
         UpdatePlayerUI();
 
     }
+    public void KickPlayer() //kick player as host of the lobby
+    {
+        LobbyManager.instance.KickPlayer(LobbyManager.instance.activeLobby.Players[1].Id); //Players[O] is LobbyOwner, 1 is Second Player
+    }
     public void UpdatePlayerUI()
     {
-        Player1Haustiere.SetActive(false);
-        Player1Aliens.SetActive(false);
-        Player2Haustiere.SetActive(false);
-        Player2Aliens.SetActive(false);
+        Hide(Player1Haustiere);
+        Hide(Player1Aliens);
+        Hide(Player2Haustiere);
+        Hide(Player2Aliens);
+        Hide(Player2HaustiereKick);
+        Hide(Player2AliensKick);
         int count = 1;
-        foreach (var players in LobbyManager.instance.activeLobby.Players)
+        Text lobbyname = MyLobby.transform.Find("Name").GetComponent<Text>();
+        if (lobbyname != null)
+        {
+            lobbyname.text = LobbyManager.instance.activeLobby.Name;
+        }
+        foreach (Player player in LobbyManager.instance.activeLobby.Players)
         {
             if(count == 1)
             {
-               if (players.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value.ToString() == LobbyManager.PlayerCharacter.Haustiere.ToString())
+                if (player.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value.ToString() == LobbyManager.PlayerCharacter.Haustiere.ToString())
                 {
                     Text childText = Player1Haustiere.transform.Find("Name").GetComponent<Text>();
                     if (childText != null)
                     {
-                        childText.text = players.Data[LobbyManager.KEY_USERNAME].Value.ToString();
+                        childText.text = player.Data[LobbyManager.KEY_USERNAME].Value.ToString();
                     }
-                    Player1Aliens.SetActive(false);
-                    Player1Haustiere.SetActive(true);
+                    Show(Player1Haustiere);
                 }
-               else
+                else
                 {
                     Text childText = Player1Aliens.transform.Find("Name").GetComponent<Text>();
                     if (childText != null)
                     {
-                        childText.text = players.Data[LobbyManager.KEY_USERNAME].Value.ToString();
+                        childText.text = player.Data[LobbyManager.KEY_USERNAME].Value.ToString();
                     }
-                    Player1Haustiere.SetActive(false);
-                    Player1Aliens.SetActive(true);
+                    Show(Player1Aliens);
                 }
-               count++;
-                
+                count++;
             }
             else
             {
-                if (players.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value.ToString() == LobbyManager.PlayerCharacter.Haustiere.ToString())
+                if (player.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value.ToString() == LobbyManager.PlayerCharacter.Haustiere.ToString())
                 {
                     Text childText = Player2Haustiere.transform.Find("Name").GetComponent<Text>();
                     if (childText != null)
                     {
-                        childText.text = players.Data[LobbyManager.KEY_USERNAME].Value.ToString();
+                        childText.text = player.Data[LobbyManager.KEY_USERNAME].Value.ToString();
                     }
-                    Player2Aliens.SetActive(false);
                     Player2Haustiere.SetActive(true);
+                    if (LobbyManager.instance.IsLobbyHost()) //only host can kick
+                    {
+                        Show(Player2HaustiereKick);
+                    }
                 }
                 else
                 {
                     Text childText = Player2Aliens.transform.Find("Name").GetComponent<Text>();
                     if (childText != null)
                     {
-                        childText.text = players.Data[LobbyManager.KEY_USERNAME].Value.ToString();
+                        childText.text = player.Data[LobbyManager.KEY_USERNAME].Value.ToString();
                     }
-                    Player2Haustiere.SetActive(false);
                     Player2Aliens.SetActive(true);
+                    if (LobbyManager.instance.IsLobbyHost()) //only host can kick
+                    {
+                        Show(Player2AliensKick);
+                    }
                 }
             }
-            
+
         }
+    }
+    public void Hide(GameObject gameobject)
+    {
+        gameobject.SetActive(false);
+    }
+    public void Show(GameObject gameobject)
+    {
+        gameobject.SetActive(true);
     }
 
 }

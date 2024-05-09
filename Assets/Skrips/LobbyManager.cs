@@ -33,22 +33,24 @@ public class LobbyManager : MonoBehaviour
 
 
     public string username { get; private set; }
-
     public string playerid { get; private set; }
 
-    public bool updateUI = false;
-
+    public QueryResponse lobbies { get; private set; } //response of the current lobby request -> to display in UI
     public Lobby activeLobby { get; private set; }
+    public bool lobbyjoining = false; //after trying to join a lobby = true
+    public bool updateUI = false; //after getting new lobbydata = true
+    public bool pullenlobby = false; //after requesting current lobbies = true
 
     private float heartbeatTimer; //needed because after 30sec -> "inactive" lobby gets destroyed!
-    private float lobbyPollTimer; 
-    public QueryResponse lobbies { get; private set; }
-    public bool pullenlobby = false;
+    private float lobbyPollTimer; //timer to request lobbydata
+    private float refreshLobbyListTimer;
+
 
     private void Update()
     {
         HandleLobbyHeartbeat();
         HandleLobbyPolling();
+        //HandleRefreshLobbyList();
     }
 
     private async void HandleLobbyHeartbeat()
@@ -80,7 +82,20 @@ public class LobbyManager : MonoBehaviour
             }
         }
     }
+    private void HandleRefreshLobbyList()
+    {
+        if (UnityServices.State == ServicesInitializationState.Initialized && AuthenticationService.Instance.IsSignedIn)
+        {
+            refreshLobbyListTimer -= Time.deltaTime;
+            if (refreshLobbyListTimer < 0f)
+            {
+                float refreshLobbyListTimerMax = 5f;
+                refreshLobbyListTimer = refreshLobbyListTimerMax;
 
+                ListLobbies();
+            }
+        }
+    }
     public bool IsLobbyHost() //to check if the current user is the host of the lobby and if there is a lobby!
     {
         return activeLobby != null && activeLobby.HostId == AuthenticationService.Instance.PlayerId;
@@ -120,6 +135,10 @@ public class LobbyManager : MonoBehaviour
         {
             Debug.LogException(ex);
         }
+        finally
+        {
+            lobbyjoining = true;
+        }
     }
     public async void ListLobbies()
     {
@@ -153,12 +172,24 @@ public class LobbyManager : MonoBehaviour
     }
     public async void JoinLobbyByIdAsync(Lobby lobby)
     {
-        JoinLobbyByIdOptions options = new JoinLobbyByIdOptions
+        try
         {
-            Player = GetPlayer() //giving the username from joining player to lobby
-        };
-        activeLobby = await LobbyService.Instance.JoinLobbyByIdAsync(lobby.Id, options);
-        updateUI = true;
+            JoinLobbyByIdOptions options = new JoinLobbyByIdOptions
+            {
+                Player = GetPlayer() //giving the username from joining player to lobby
+            };
+            activeLobby = await LobbyService.Instance.JoinLobbyByIdAsync(lobby.Id, options);
+            updateUI = true;
+        }
+        catch (Exception ex)
+        {
+            Debug.LogException(ex);
+        }
+        finally { 
+        lobbyjoining = true; 
+        }
+       
+
     }
     public async void UpdatePlayerCharacter(PlayerCharacter playerCharacter)
     {
@@ -204,5 +235,33 @@ public class LobbyManager : MonoBehaviour
                 Debug.Log(e);
             }
         }
+    }
+    public async void KickPlayer(string playerId)
+    {
+        if (IsLobbyHost())
+        {
+            try
+            {
+                await LobbyService.Instance.RemovePlayerAsync(activeLobby.Id, playerId);
+            }
+            catch (LobbyServiceException e)
+            {
+                Debug.Log(e);
+            }
+        }
+    }
+    public bool IsPlayerInLobby() //check if the player is in any lobby
+    {
+        if (activeLobby != null && activeLobby.Players != null)
+        {
+            foreach (Player player in activeLobby.Players)
+            {
+                if (player.Id == AuthenticationService.Instance.PlayerId)
+                {
+                    return true;  // This player is in this lobby
+                }
+            }
+        }
+        return false;
     }
 }
