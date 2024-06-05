@@ -1730,6 +1730,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alienplayer: {fileID: 1178169791}
   haustierplayer: {fileID: 82705932}
+  alienCardsPanel: {fileID: 156671423}
+  petCardsPanel: {fileID: 1368741747}
   places: {fileID: 786270577}
   col: {fileID: 11400000, guid: 9b6d4f7330f80d24884b3dfffb360a24, type: 2}
   tri: {fileID: 6737787659288311241, guid: 9010ed68a89eeed45b96cd4fe13cfbf5, type: 3}
@@ -4731,7 +4733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1368741748
 RectTransform:
   m_ObjectHideFlags: 0

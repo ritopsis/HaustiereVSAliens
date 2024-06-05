@@ -10,6 +10,8 @@ public class Test : NetworkBehaviour
     // Start is called before the first frame update
     public Text alienplayer;
     public Text haustierplayer;
+    public GameObject alienCardsPanel;
+    public GameObject petCardsPanel;
     public GameObject places;
     public CharacterObjectList col;
 
@@ -30,6 +32,9 @@ public class Test : NetworkBehaviour
             alienplayer.text = CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value;
             haustierplayer.text = CurrentGame.otherPlayer.Data[LobbyManager.KEY_USERNAME].Value;
         }
+
+        loadTroopsPanel();
+        Debug.Log("Test.cs: Start method");
     }
 
 
@@ -48,9 +53,26 @@ public class Test : NetworkBehaviour
 
         Debug.Log("sending");
         ServerRpc(col.characterObjectList.IndexOf(tri), position);
-            Debug.Log("send");
+        Debug.Log("send");
 
     }
+
+
+    private void loadTroopsPanel()
+    {
+        if (CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value == LobbyManager.PlayerCharacter.Haustiere.ToString())
+        {
+            petCardsPanel.SetActive(true);
+            alienCardsPanel.SetActive(false);
+        }
+        else
+        {
+            petCardsPanel.SetActive(false);
+            alienCardsPanel.SetActive(true);
+        }
+    }
+
+
     //send from client to server
     [ServerRpc(RequireOwnership =false)]
     private void ServerRpc(int index, string position)
