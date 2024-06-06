@@ -22,7 +22,11 @@ public class Test : NetworkBehaviour
     void Start()
     {
         count = 0;
-        if(CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value == LobbyManager.PlayerCharacter.Haustiere.ToString())
+    }
+    public void gameStart()
+    {
+
+        if (CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value == LobbyManager.PlayerCharacter.Haustiere.ToString())
         {
             haustierplayer.text = CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value;
             alienplayer.text = CurrentGame.otherPlayer.Data[LobbyManager.KEY_USERNAME].Value;
@@ -37,15 +41,20 @@ public class Test : NetworkBehaviour
         Debug.Log("Test.cs: Start method");
     }
 
-
     public void starthost()
     {
         Debug.Log("start");
         NetworkManager.Singleton.StartHost();
+        CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value = LobbyManager.PlayerCharacter.Haustiere.ToString();
+        CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value = "Host";
+        gameStart();
     }
     public void startclient()
     {
         NetworkManager.Singleton.StartClient();
+        CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value = LobbyManager.PlayerCharacter.Aliens.ToString();
+        CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value = "Client";
+        gameStart();
     }
 
     public void SendMessageToServer(string position)
@@ -60,13 +69,16 @@ public class Test : NetworkBehaviour
 
     private void loadTroopsPanel()
     {
+        Debug.Log("loadTroops");
         if (CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value == LobbyManager.PlayerCharacter.Haustiere.ToString())
         {
+            Debug.Log("Random haustier");
             petCardsPanel.SetActive(true);
             alienCardsPanel.SetActive(false);
         }
         else
         {
+            Debug.Log("Random alien");
             petCardsPanel.SetActive(false);
             alienCardsPanel.SetActive(true);
         }

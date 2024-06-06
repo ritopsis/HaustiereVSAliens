@@ -750,7 +750,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.369995, y: 463.04}
+  m_AnchoredPosition: {x: -12.369995, y: 463.04004}
   m_SizeDelta: {x: -661.42, y: -926.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &156671425
@@ -2982,6 +2982,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IngameDebugConsole
       objectReference: {fileID: 0}
+    - target: {fileID: 183006, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 11452418, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: startMinimized
       value: 1
@@ -4754,7 +4758,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.369995, y: 463.04}
+  m_AnchoredPosition: {x: -12.369995, y: 463.04004}
   m_SizeDelta: {x: -661.42, y: -926.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1368741749
