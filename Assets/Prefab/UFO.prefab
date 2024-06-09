@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5575647719199937631}
   - component: {fileID: 17575538064225731}
   - component: {fileID: -7057956549041392843}
+  - component: {fileID: 8242631698070714290}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Outbound
@@ -124,4 +125,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   targetTag: Projectile
-  healthBar: {fileID: 0}
+  healthText: {fileID: 0}
+--- !u!114 &8242631698070714290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8220929072829624428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 0
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1

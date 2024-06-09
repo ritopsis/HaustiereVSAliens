@@ -1,29 +1,143 @@
 using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Netcode;
 
-public class SpawnerPet : MonoBehaviour
+public class SpawnerPet : NetworkBehaviour
 {
-    // List of pets (prefabs) that will instantiate
     public List<GameObject> petsPrefabs;
-
     public Transform spawnPetRoot;
-
-    // List of pets UI
-    public List<UnityEngine.UI.Image> petsUI;
-
-    // ID of pet to spawn (-1 means none)
+    public List<Image> petsUI;
     int spawnID = -1;
-
-    // List of spawn points (object containers)
     private List<Transform> spawnPoints;
 
     void Start()
     {
-        // Find all spawn points tagged with "PetSpawn"
+        GameObject[] spawnPointObjects = GameObject.FindGameObjectsWithTag("PetSpawn");
+        spawnPoints = new List<Transform>();
+        foreach (var obj in spawnPointObjects)
+        {
+            spawnPoints.Add(obj.transform);
+        }
+    }
+
+    void Update()
+    {
+        if (IsServer && CanSpawn())
+        {
+            DetectSpawnPoint();
+        }
+    }
+
+    bool CanSpawn()
+    {
+        return spawnID != -1;
+    }
+
+    void DetectSpawnPoint()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePos.z = 0;
+
+            Transform selectedSpawnPoint = null;
+            float minDistance = float.MaxValue;
+            foreach (var spawnPoint in spawnPoints)
+            {
+                float distance = Vector3.Distance(mousePos, spawnPoint.position);
+                if (distance < minDistance)
+                {
+                    minDistance = distance;
+                    selectedSpawnPoint = spawnPoint;
+                }
+            }
+
+            if (selectedSpawnPoint != null)
+            {
+                RequestSpawnPetServerRpc(spawnID, selectedSpawnPoint.position, selectedSpawnPoint.GetComponent<NetworkObject>().NetworkObjectId);
+                spawnPoints.Remove(selectedSpawnPoint);
+                selectedSpawnPoint.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    [ServerRpc]
+    void RequestSpawnPetServerRpc(int id, Vector3 position, ulong spawnPointId)
+    {
+        GameObject pet = Instantiate(petsPrefabs[id], position, Quaternion.identity, spawnPetRoot);
+        var networkObject = pet.GetComponent<NetworkObject>();
+        networkObject.Spawn();
+
+        pet.GetComponent<Pet>().Init(NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform);
+        NotifySpawnPetClientRpc(pet.GetComponent<NetworkObject>().NetworkObjectId, spawnPointId);
+    }
+
+    [ClientRpc]
+    void NotifySpawnPetClientRpc(ulong petNetworkObjectId, ulong spawnPointId)
+    {
+        if (NetworkManager.Singleton.IsServer) return;
+
+        var pet = NetworkManager.Singleton.SpawnManager.SpawnedObjects[petNetworkObjectId].GetComponent<Pet>();
+        var spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
+        pet.Init(spawnPoint);
+
+        DeselectPets();
+    }
+
+    void DeselectPets()
+    {
+        spawnID = -1;
+        foreach (var petUI in petsUI)
+        {
+            petUI.color = Color.white;
+        }
+    }
+
+    public void RevertSpawnPoint(Transform spawnPoint)
+    {
+        spawnPoints.Add(spawnPoint);
+        spawnPoint.gameObject.SetActive(true);
+    }
+
+    public void SelectPet(int id)
+    {
+        if (id >= 0 && id < petsPrefabs.Count)
+        {
+            spawnID = id;
+            for (int i = 0; i < petsUI.Count; i++)
+            {
+                if (i == id)
+                {
+                    petsUI[i].color = Color.green;
+                }
+                else
+                {
+                    petsUI[i].color = Color.white;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/* 
+
+public class SpawnerPet : MonoBehaviour
+{
+    public List<GameObject> petsPrefabs;
+    public Transform spawnPetRoot;
+    public List<UnityEngine.UI.Image> petsUI;
+    int spawnID = -1;
+    private List<Transform> spawnPoints;
+
+    void Start()
+    {
         GameObject[] spawnPointObjects = GameObject.FindGameObjectsWithTag("PetSpawn");
         spawnPoints = new List<Transform>();
         foreach (var obj in spawnPointObjects)
@@ -50,11 +164,9 @@ public class SpawnerPet : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePos.z = 0;  // Ensure Z coordinate is zero for 2D
+            mousePos.z = 0;
 
             Transform selectedSpawnPoint = null;
-
-            // Find the closest spawn point to the mouse position
             float minDistance = float.MaxValue;
             foreach (var spawnPoint in spawnPoints)
             {
@@ -68,10 +180,7 @@ public class SpawnerPet : MonoBehaviour
 
             if (selectedSpawnPoint != null)
             {
-                // Spawn the pet at the selected spawn point
                 SpawnPet(selectedSpawnPoint.position, selectedSpawnPoint);
-                
-                // Optionally, you can disable the spawn point or make it unavailable for future spawns
                 spawnPoints.Remove(selectedSpawnPoint);
                 selectedSpawnPoint.gameObject.SetActive(false);
             }
@@ -92,7 +201,7 @@ public class SpawnerPet : MonoBehaviour
         spawnID = -1;
         foreach (var petUI in petsUI)
         {
-            petUI.color = Color.white; // Or any other logic to reset UI selection
+            petUI.color = Color.white;
         }
     }
 
@@ -102,18 +211,16 @@ public class SpawnerPet : MonoBehaviour
         spawnPoint.gameObject.SetActive(true);
     }
 
-    // New method to select a pet based on user input
     public void SelectPet(int id)
     {
         if (id >= 0 && id < petsPrefabs.Count)
         {
             spawnID = id;
-            // Highlight the selected pet UI
             for (int i = 0; i < petsUI.Count; i++)
             {
                 if (i == id)
                 {
-                    petsUI[i].color = Color.green; // Or any other color to indicate selection
+                    petsUI[i].color = Color.green;
                 }
                 else
                 {
@@ -123,3 +230,4 @@ public class SpawnerPet : MonoBehaviour
         }
     }
 }
+*/
