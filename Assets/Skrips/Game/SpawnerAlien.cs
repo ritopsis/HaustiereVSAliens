@@ -5,14 +5,24 @@ using UnityEngine.UI;
 
 public class SpawnerAlien : MonoBehaviour
 {
+    // List of aliens (prefabs) that will instantiate
     public List<GameObject> aliensPrefabs;
+
     public Transform spawnAlienRoot;
+
+    // List of aliens UI
     public List<UnityEngine.UI.Image> aliensUI;
+
+    // ID of alien to spawn (-1 means none)
     int spawnID = -1;
+
+    // List of spawn points (object containers)
     private List<Transform> spawnPoints;
+    private Dictionary<Transform, GameObject> dittoAliens = new Dictionary<Transform, GameObject>();
 
     void Start()
     {
+        // Find all spawn points tagged with "AlienSpawn"
         GameObject[] spawnPointObjects = GameObject.FindGameObjectsWithTag("AlienSpawn");
         spawnPoints = new List<Transform>();
         foreach (var obj in spawnPointObjects)
@@ -39,9 +49,11 @@ public class SpawnerAlien : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePos.z = 0;
+            mousePos.z = 0;  // Ensure Z coordinate is zero for 2D
 
             Transform selectedSpawnPoint = null;
+
+            // Find the closest spawn point to the mouse position
             float minDistance = float.MaxValue;
             foreach (var spawnPoint in spawnPoints)
             {
@@ -55,11 +67,26 @@ public class SpawnerAlien : MonoBehaviour
 
             if (selectedSpawnPoint != null)
             {
-                SpawnAlien(selectedSpawnPoint.position, selectedSpawnPoint);
-                spawnPoints.Remove(selectedSpawnPoint);
-                selectedSpawnPoint.gameObject.SetActive(false);
+                if (CanSpawnDitto(selectedSpawnPoint))
+                {
+                    SpawnAlien(selectedSpawnPoint.position, selectedSpawnPoint);
+                }
             }
         }
+    }
+
+    bool CanSpawnDitto(Transform spawnPoint)
+    {
+        if (aliensPrefabs[spawnID].name == "DittoAlien")
+        {
+            if (!dittoAliens.ContainsKey(spawnPoint) || dittoAliens[spawnPoint] == null)
+            {
+                dittoAliens[spawnPoint] = null; // Reserve the spot
+                return true;
+            }
+            return false;
+        }
+        return true;
     }
 
     void SpawnAlien(Vector3 position, Transform spawnPoint)
@@ -67,6 +94,11 @@ public class SpawnerAlien : MonoBehaviour
         GameObject alien = Instantiate(aliensPrefabs[spawnID], spawnAlienRoot);
         alien.transform.position = position;
         alien.GetComponent<Alien>().Init(spawnPoint);
+
+        if (aliensPrefabs[spawnID].name == "DittoAlien")
+        {
+            dittoAliens[spawnPoint] = alien;
+        }
 
         DeselectAliens();
     }
@@ -76,7 +108,7 @@ public class SpawnerAlien : MonoBehaviour
         spawnID = -1;
         foreach (var alienUI in aliensUI)
         {
-            alienUI.color = Color.white;
+            alienUI.color = Color.white; // Or any other logic to reset UI selection
         }
     }
 
@@ -91,17 +123,26 @@ public class SpawnerAlien : MonoBehaviour
         if (id >= 0 && id < aliensPrefabs.Count)
         {
             spawnID = id;
+            // Highlight the selected alien UI
             for (int i = 0; i < aliensUI.Count; i++)
             {
                 if (i == id)
                 {
-                    aliensUI[i].color = Color.green;
+                    aliensUI[i].color = Color.green; // Or any other color to indicate selection
                 }
                 else
                 {
                     aliensUI[i].color = Color.white;
                 }
             }
+        }
+    }
+
+    public void NotifyDittoDeath(Transform spawnPoint)
+    {
+        if (dittoAliens.ContainsKey(spawnPoint))
+        {
+            dittoAliens[spawnPoint] = null;
         }
     }
 }

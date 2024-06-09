@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3368060654280361435}
   - component: {fileID: 3732572041683031016}
   m_Layer: 0
-  m_Name: ditto
+  m_Name: DittoAlien
   m_TagString: Alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
