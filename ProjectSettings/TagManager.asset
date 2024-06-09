@@ -3,10 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Alien
-  - Pet
-  - Outbound
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -41,12 +38,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: map
-    uniqueID: 3453922189
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: UI
-    uniqueID: 1496413105
     locked: 0
