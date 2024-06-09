@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &40304202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 679039023}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &41044518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -134,6 +139,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -218,7 +231,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 676079951}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &41044519 stripped
 RectTransform:
@@ -236,6 +252,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -320,12 +344,20 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1802694522}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &64134548 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 64134547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &80932754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 727869157187322107, guid: cf2c7f2af124d284ea25483ad2945658, type: 3}
+  m_PrefabInstance: {fileID: 9208404304717307517}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &82705930
 GameObject:
@@ -418,6 +450,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectContainer (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -501,7 +541,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 813736981}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &101361961 stripped
 RectTransform:
@@ -519,6 +562,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -603,7 +654,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1753789651}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &102331902 stripped
 RectTransform:
@@ -621,6 +675,26 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: AlienSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8940014
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8940014
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9669811
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -729,7 +803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &156671424
 RectTransform:
   m_ObjectHideFlags: 0
@@ -802,6 +876,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -886,12 +968,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 780055600}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &174028735 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 174028734}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &213786597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 840622381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &221684395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 603755761}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &255646974
 PrefabInstance:
@@ -904,6 +999,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -988,7 +1091,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1934225045}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &255646975 stripped
 RectTransform:
@@ -1112,6 +1218,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &359063687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 483693869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &371763288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1123,6 +1234,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -1207,7 +1326,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 495829646}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &371763289 stripped
 RectTransform:
@@ -1225,6 +1347,26 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: AlienSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -1328,6 +1470,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectContainer (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: AlienSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1418,6 +1580,16 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 429650284}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &437965952 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4719668128502661463, guid: f9d793d0274adf245a37e3e28e7ee21d, type: 3}
+  m_PrefabInstance: {fileID: 5144283377191942695}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &460006852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 7895139883748447437}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &483693869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1429,6 +1601,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -1513,13 +1693,51 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 483693873}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &483693870 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 483693869}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &483693873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359063687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
+--- !u!1 &495829643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 371763288}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &495829646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495829643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1001 &510575928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1531,6 +1749,26 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: AlienSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -1685,7 +1923,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.279134
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1711,7 +1949,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0562, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1766,6 +2004,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -1850,12 +2096,20 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 981905409}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &529499206 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 529499205}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &548781145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 1854386753}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &572522925
 PrefabInstance:
@@ -1868,6 +2122,26 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: AlienSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -1971,6 +2245,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectContainer (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2054,13 +2336,140 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 603755765}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &603755762 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 603755761}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &603755765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221684395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
+--- !u!1 &630595432 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 1362421139}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &649439876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 649439878}
+  - component: {fileID: 649439877}
+  - component: {fileID: 649439879}
+  m_Layer: 0
+  m_Name: _Scripts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &649439877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649439876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs:
+  - {fileID: 3953260163443447115, guid: 44eeedc5a4e62824190fea2762d52179, type: 3}
+  - {fileID: 7136392491641645078, guid: 908d007dba9281c4b8f9d11c78894198, type: 3}
+  - {fileID: 6534960445801754736, guid: e93ae4b561499a347a3e78a9b4ddf4ab, type: 3}
+  - {fileID: 3664694891473496737, guid: 0f2444dc9d783784c81920b91c5ec2ee, type: 3}
+  spawnPetRoot: {fileID: 1842663757}
+  petsUI:
+  - {fileID: 9208404304717307519}
+  - {fileID: 5624915686394543075}
+  - {fileID: 5144283377191942697}
+  - {fileID: 8466670912044919216}
+--- !u!4 &649439878
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649439876}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &649439879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649439876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a3375bbd1d664d4884e4536536848f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aliensPrefabs:
+  - {fileID: 8106195724901897049, guid: becbf4504c5f41640a7f9c4de114f208, type: 3}
+  - {fileID: 2837036457489509917, guid: 8103ef7e9c9497a4bbd9c90ac44938c1, type: 3}
+  - {fileID: 7713850060123012895, guid: e5a7d8edccb627e4b8a2d012c9c4524b, type: 3}
+  - {fileID: 2692875266495682241, guid: 1a423a7bcb72afa48a4c468ecde861cf, type: 3}
+  spawnAlienRoot: {fileID: 1842663757}
+  aliensUI:
+  - {fileID: 8329624941241655695}
+  - {fileID: 8631028193689516177}
+  - {fileID: 8753954904430137367}
+  - {fileID: 9101498708517210299}
+--- !u!1 &649683926 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4315433674794181511, guid: 3f5c9034a99d25840ad30bfbe72dbca6, type: 3}
+  m_PrefabInstance: {fileID: 8753954904430137365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &676079948 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 41044518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &676079951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676079948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1001 &679039023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2072,6 +2481,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -2156,13 +2573,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 679039027}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &679039024 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 679039023}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &679039027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40304202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1001 &738112634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2174,6 +2609,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -2258,7 +2701,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1276993247}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &738112635 stripped
 RectTransform:
@@ -2276,6 +2722,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -2360,13 +2814,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1559278792}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &757294675 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 757294674}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &780055597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 174028734}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &780055600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780055597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1 &786270577
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,6 +2958,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &796822169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 1768026714}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &807671387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2492,6 +2974,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -2576,7 +3066,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1877175981}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &807671388 stripped
 RectTransform:
@@ -2664,6 +3157,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 809155483}
   m_CullTransparentMesh: 1
+--- !u!1 &813736978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 101361960}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &813736981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813736978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1001 &840622381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2675,6 +3188,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -2759,12 +3280,35 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 840622385}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &840622382 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 840622381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &840622385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213786597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
+--- !u!1 &871031046 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2105079940479837080, guid: b23a69790bd4ed04c8e42cea42741c6b, type: 3}
+  m_PrefabInstance: {fileID: 9101498708517210297}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &871588896
 PrefabInstance:
@@ -2777,6 +3321,26 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: AlienSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -2868,6 +3432,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 871588896}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &873601933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 1454489895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &886422296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2879,6 +3448,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -2963,12 +3540,20 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1908665648}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &886422297 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 886422296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &887741375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 798613152945775722, guid: a843d46a5fa94494db977fd1cafd2a20, type: 3}
+  m_PrefabInstance: {fileID: 8631028193689516175}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &905907879
 PrefabInstance:
@@ -3412,6 +3997,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectContainer (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3495,7 +4088,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1979995797}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &956239286 stripped
 RectTransform:
@@ -3721,6 +4317,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectContainer (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3804,12 +4408,40 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1553239146}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &978910535 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 978910534}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &981905406 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 529499205}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &981905409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981905406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
+--- !u!1 &1005124152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 2048339473}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1023400496
 GameObject:
@@ -3956,6 +4588,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectContainer (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4039,7 +4679,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1956883078}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &1050439290 stripped
 RectTransform:
@@ -4125,6 +4768,26 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: AlienSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -4215,6 +4878,11 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 1084601472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1090690803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 1552329133}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1173012091
 GameObject:
@@ -4375,6 +5043,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178169789}
   m_CullTransparentMesh: 1
+--- !u!1 &1276993244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 738112634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1276993247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276993244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1001 &1330013832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4386,6 +5074,26 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: AlienSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8940014
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8940014
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9669811
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -4489,6 +5197,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectContainer (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4572,13 +5288,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1362421143}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &1362421140 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 1362421139}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1362421143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630595432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1 &1365708776
 GameObject:
   m_ObjectHideFlags: 0
@@ -4811,6 +5545,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectContainer (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: AlienSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4901,6 +5655,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 1379561616}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1383003564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 1621052276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1399459295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4912,6 +5671,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -4996,7 +5763,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1620427804}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &1399459296 stripped
 RectTransform:
@@ -5156,6 +5926,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectContainer (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5239,12 +6017,45 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1454489899}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &1454489896 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 1454489895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1454489899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873601933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
+--- !u!1 &1466702655 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 1958431887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1495201587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 1538846774}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1501802403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3617467900734872283, guid: b9d97bbcbd8361247bc1fd2b3d422e5a, type: 3}
+  m_PrefabInstance: {fileID: 8329624941241655693}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1506790452
 GameObject:
@@ -5364,6 +6175,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectContainer (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5447,13 +6266,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1538846778}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &1538846775 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 1538846774}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1538846778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495201587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1001 &1541156963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5465,6 +6302,26 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: AlienSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -5568,6 +6425,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectContainer (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5651,13 +6516,71 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1552329137}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &1552329134 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 1552329133}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1552329137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090690803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
+--- !u!1 &1553239143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 978910534}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1553239146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553239143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
+--- !u!1 &1559278789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 757294674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1559278792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559278789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1 &1620288521
 GameObject:
   m_ObjectHideFlags: 0
@@ -5791,6 +6714,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620288521}
   m_CullTransparentMesh: 1
+--- !u!1 &1620427801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 1399459295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1620427804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620427801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1001 &1621052276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5802,6 +6745,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -5886,12 +6837,35 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1621052280}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &1621052277 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 1621052276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1621052280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383003564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
+--- !u!1 &1624555615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7342787215092025626, guid: dd256ea310c37b7499a05684b217a648, type: 3}
+  m_PrefabInstance: {fileID: 5624915686394543073}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1669474418
 GameObject:
@@ -6002,6 +6976,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectContainer (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: AlienSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8940014
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8940014
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9669811
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6092,6 +7086,26 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 1685872620}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1753789648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 102331901}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1753789651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753789648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1001 &1768026714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6103,6 +7117,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -6187,13 +7209,82 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1768026718}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &1768026715 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 1768026714}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1768026718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796822169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
+--- !u!1 &1802694519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 64134547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1802694522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802694519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
+--- !u!1 &1842663756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1842663757}
+  m_Layer: 0
+  m_Name: SpawnedObjects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1842663757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842663756}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1854386753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6205,6 +7296,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -6289,13 +7388,51 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1854386757}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &1854386754 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 1854386753}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1854386757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548781145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
+--- !u!1 &1877175978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 807671387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1877175981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877175978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1001 &1882536530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6307,6 +7444,26 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: AlienSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -6398,6 +7555,26 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 1882536530}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1908665645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 886422296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1908665648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908665645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1 &1910038977
 GameObject:
   m_ObjectHideFlags: 0
@@ -6542,6 +7719,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectContainer (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: AlienSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.b
+      value: 0.92136884
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.g
+      value: 0.92136884
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6632,6 +7829,26 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 1925119499}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1934225042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 255646974}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1934225045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934225042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1 &1943687384
 GameObject:
   m_ObjectHideFlags: 0
@@ -6764,6 +7981,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943687384}
   m_CullTransparentMesh: 1
+--- !u!1 &1956883075 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 1050439289}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1956883078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956883075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1001 &1958431887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6775,6 +8012,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -6859,12 +8104,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1958431891}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &1958431888 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 1958431887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1958431891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466702655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
+--- !u!1 &1979995794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+  m_PrefabInstance: {fileID: 956239285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1979995797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979995794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
+--- !u!1 &2001780335 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4828285055811618666, guid: 3623401a18158174dbfaadecf5f04316, type: 3}
+  m_PrefabInstance: {fileID: 8466670912044919214}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2048339473
 PrefabInstance:
@@ -6877,6 +8165,14 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -6961,13 +8257,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2048339477}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &2048339474 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 2048339473}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2048339477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005124152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1001 &2059455635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6979,6 +8293,26 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: AlienSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -7081,6 +8415,26 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Name
       value: ObjectContainer (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: AlienSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -7267,13 +8621,56 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4719668128502661463, guid: f9d793d0274adf245a37e3e28e7ee21d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5144283377191942699}
   m_SourcePrefab: {fileID: 100100000, guid: f9d793d0274adf245a37e3e28e7ee21d, type: 3}
 --- !u!224 &5144283377191942696 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6337570629147223027, guid: f9d793d0274adf245a37e3e28e7ee21d, type: 3}
   m_PrefabInstance: {fileID: 5144283377191942695}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5144283377191942697 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2101508563361807818, guid: f9d793d0274adf245a37e3e28e7ee21d, type: 3}
+  m_PrefabInstance: {fileID: 5144283377191942695}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437965952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5144283377191942699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437965952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 649439877}
+          m_TargetAssemblyTypeName: SpawnerPet, Assembly-CSharp
+          m_MethodName: SelectPet
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &5624915686394543073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7369,13 +8766,56 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7342787215092025626, guid: dd256ea310c37b7499a05684b217a648, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5624915686394543077}
   m_SourcePrefab: {fileID: 100100000, guid: dd256ea310c37b7499a05684b217a648, type: 3}
 --- !u!224 &5624915686394543074 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3734330356368898692, guid: dd256ea310c37b7499a05684b217a648, type: 3}
   m_PrefabInstance: {fileID: 5624915686394543073}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5624915686394543075 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4405830503056637189, guid: dd256ea310c37b7499a05684b217a648, type: 3}
+  m_PrefabInstance: {fileID: 5624915686394543073}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624555615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5624915686394543077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624555615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 649439877}
+          m_TargetAssemblyTypeName: SpawnerPet, Assembly-CSharp
+          m_MethodName: SelectPet
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &7895139883748447437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7391,6 +8831,26 @@ PrefabInstance:
     - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.b
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.g
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Color.r
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859129373545204154, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
       propertyPath: m_Pivot.x
@@ -7475,13 +8935,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7895139883748447441}
   m_SourcePrefab: {fileID: 100100000, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
 --- !u!224 &7895139883748447438 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927581205878527597, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
   m_PrefabInstance: {fileID: 7895139883748447437}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7895139883748447441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460006852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d449d6dc4a8340bce0922193bf49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPrefabs: []
+  spawnPetRoot: {fileID: 0}
+  petsUI: []
 --- !u!1001 &8329624941241655693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7577,13 +9055,56 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3617467900734872283, guid: b9d97bbcbd8361247bc1fd2b3d422e5a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8329624941241655697}
   m_SourcePrefab: {fileID: 100100000, guid: b9d97bbcbd8361247bc1fd2b3d422e5a, type: 3}
 --- !u!224 &8329624941241655694 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 877497052088343530, guid: b9d97bbcbd8361247bc1fd2b3d422e5a, type: 3}
   m_PrefabInstance: {fileID: 8329624941241655693}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8329624941241655695 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8296102227438639680, guid: b9d97bbcbd8361247bc1fd2b3d422e5a, type: 3}
+  m_PrefabInstance: {fileID: 8329624941241655693}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501802403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8329624941241655697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501802403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 649439879}
+          m_TargetAssemblyTypeName: SpawnerAlien, Assembly-CSharp
+          m_MethodName: SelectAlien
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &8466670912044919214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7679,13 +9200,56 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4828285055811618666, guid: 3623401a18158174dbfaadecf5f04316, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8466670912044919218}
   m_SourcePrefab: {fileID: 100100000, guid: 3623401a18158174dbfaadecf5f04316, type: 3}
 --- !u!224 &8466670912044919215 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4742197068327740949, guid: 3623401a18158174dbfaadecf5f04316, type: 3}
   m_PrefabInstance: {fileID: 8466670912044919214}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8466670912044919216 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3366133132968530354, guid: 3623401a18158174dbfaadecf5f04316, type: 3}
+  m_PrefabInstance: {fileID: 8466670912044919214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001780335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8466670912044919218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001780335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 649439877}
+          m_TargetAssemblyTypeName: SpawnerPet, Assembly-CSharp
+          m_MethodName: SelectPet
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &8631028193689516175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7781,13 +9345,56 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 798613152945775722, guid: a843d46a5fa94494db977fd1cafd2a20, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8631028193689516179}
   m_SourcePrefab: {fileID: 100100000, guid: a843d46a5fa94494db977fd1cafd2a20, type: 3}
 --- !u!224 &8631028193689516176 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2690380778883389941, guid: a843d46a5fa94494db977fd1cafd2a20, type: 3}
   m_PrefabInstance: {fileID: 8631028193689516175}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8631028193689516177 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9121460406559403135, guid: a843d46a5fa94494db977fd1cafd2a20, type: 3}
+  m_PrefabInstance: {fileID: 8631028193689516175}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887741375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8631028193689516179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887741375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 649439879}
+          m_TargetAssemblyTypeName: SpawnerAlien, Assembly-CSharp
+          m_MethodName: SelectAlien
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &8753954904430137365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7883,13 +9490,56 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4315433674794181511, guid: 3f5c9034a99d25840ad30bfbe72dbca6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8753954904430137369}
   m_SourcePrefab: {fileID: 100100000, guid: 3f5c9034a99d25840ad30bfbe72dbca6, type: 3}
 --- !u!224 &8753954904430137366 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4532341123616783244, guid: 3f5c9034a99d25840ad30bfbe72dbca6, type: 3}
   m_PrefabInstance: {fileID: 8753954904430137365}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8753954904430137367 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8311087495125135671, guid: 3f5c9034a99d25840ad30bfbe72dbca6, type: 3}
+  m_PrefabInstance: {fileID: 8753954904430137365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649683926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8753954904430137369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649683926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 649439879}
+          m_TargetAssemblyTypeName: SpawnerAlien, Assembly-CSharp
+          m_MethodName: SelectAlien
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &9101498708517210297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7985,13 +9635,56 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2105079940479837080, guid: b23a69790bd4ed04c8e42cea42741c6b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9101498708517210301}
   m_SourcePrefab: {fileID: 100100000, guid: b23a69790bd4ed04c8e42cea42741c6b, type: 3}
 --- !u!224 &9101498708517210298 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8860358470691279730, guid: b23a69790bd4ed04c8e42cea42741c6b, type: 3}
   m_PrefabInstance: {fileID: 9101498708517210297}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9101498708517210299 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8019760901830447700, guid: b23a69790bd4ed04c8e42cea42741c6b, type: 3}
+  m_PrefabInstance: {fileID: 9101498708517210297}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871031046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9101498708517210301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871031046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 649439879}
+          m_TargetAssemblyTypeName: SpawnerAlien, Assembly-CSharp
+          m_MethodName: SelectAlien
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &9208404304717307517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8087,17 +9780,61 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 727869157187322107, guid: cf2c7f2af124d284ea25483ad2945658, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9208404304717307521}
   m_SourcePrefab: {fileID: 100100000, guid: cf2c7f2af124d284ea25483ad2945658, type: 3}
 --- !u!224 &9208404304717307518 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8424524128959622489, guid: cf2c7f2af124d284ea25483ad2945658, type: 3}
   m_PrefabInstance: {fileID: 9208404304717307517}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9208404304717307519 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2832817157070238500, guid: cf2c7f2af124d284ea25483ad2945658, type: 3}
+  m_PrefabInstance: {fileID: 9208404304717307517}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80932754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9208404304717307521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80932754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 649439877}
+          m_TargetAssemblyTypeName: SpawnerPet, Assembly-CSharp
+          m_MethodName: SelectPet
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 649439878}
   - {fileID: 519420032}
   - {fileID: 1365708779}
   - {fileID: 1404080531}
@@ -8106,3 +9843,4 @@ SceneRoots:
   - {fileID: 1054705961}
   - {fileID: 1669474421}
   - {fileID: 905907879}
+  - {fileID: 1842663757}
