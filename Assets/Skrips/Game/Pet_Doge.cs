@@ -7,9 +7,8 @@ public class Pet_Doge : Pet
     public GameObject projectilePrefab; // Prefab of the projectile to shoot
     public float attackCooldown = 1f; // Time between attacks
     public float attackRange = 5f; // Range within which the doge can attack
-    private float lastAttackTime;
-
     public int attackPower = 10; // Attack power of the doge
+    private float lastAttackTime;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -29,7 +28,10 @@ public class Pet_Doge : Pet
 
     void CheckAndAttack()
     {
-        Collider2D[] hitTargets = Physics2D.OverlapCircleAll(transform.position, attackRange);
+        Vector2 position = transform.position;
+        Vector2 rightBoundary = new Vector2(position.x + attackRange, position.y + 1);
+        Collider2D[] hitTargets = Physics2D.OverlapAreaAll(position, rightBoundary);
+
         foreach (Collider2D target in hitTargets)
         {
             if (target.CompareTag("Alien") && target.transform.position.x > transform.position.x) // Ensure the target is to the right
@@ -51,6 +53,8 @@ public class Pet_Doge : Pet
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange); // Visualize the attack range in the editor
+        Vector3 position = transform.position;
+        Vector3 rightBoundary = new Vector3(position.x + attackRange, position.y + 1, position.z);
+        Gizmos.DrawLine(position, rightBoundary);
     }
 }

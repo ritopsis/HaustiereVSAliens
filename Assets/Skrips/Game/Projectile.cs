@@ -1,17 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Projectile : MonoBehaviour
 {
     public Transform graphics;
-
     public int damage;
-
     public float flySpeed, rotateSpeed;
-
-    private Transform target; // The target the projectile will move towards
+    private Transform target;
 
     public void Init(int dmg)
     {
@@ -28,14 +24,22 @@ public class Projectile : MonoBehaviour
         if (collider.CompareTag("Alien"))
         {
             Debug.Log("Enemy hit");
-            collider.GetComponent<Alien>().LoseHealth(damage);
-            Destroy(gameObject);
+            Alien alien = collider.GetComponent<Alien>();
+            if (alien != null)
+            {
+                alien.LoseHealth(damage);
+                Destroy(gameObject);
+            }
         }
 
         if (collider.CompareTag("Outbound"))
         {
             Debug.Log("Mothership hit");
-            // Logic for mothership losing health
+            Base mothership = collider.GetComponent<Base>();
+            if (mothership != null)
+            {
+                mothership.TakeDamage(damage);
+            }
             Destroy(gameObject);
         }
     }
@@ -56,11 +60,11 @@ public class Projectile : MonoBehaviour
         if (target != null)
         {
             Vector3 direction = (target.position - transform.position).normalized;
+            direction.y = 0;
             transform.Translate(direction * flySpeed * Time.deltaTime, Space.World);
         }
         else
         {
-            // If there is no target, continue flying to the right
             transform.Translate(Vector3.right * flySpeed * Time.deltaTime, Space.World);
         }
     }

@@ -6,6 +6,12 @@ TagManager:
   tags:
   - AlienSpawn
   - PetSpawn
+  - Pet
+  - Alien
+  - House
+  - UFO
+  - Outbound
+  - Projectile
   layers:
   - Default
   - TransparentFX

@@ -6,20 +6,19 @@ public class Alien : MonoBehaviour
 {
     public int health;
     public int cost;
+    public int attackPower = 10; // Attack power of the alien
     private Transform spawnPoint;
 
-    public float speed = 2f; // Speed of the alien
-    public int attackPower = 10; // Attack power of the alien
-    public float attackRange = 0.5f; // Range within which the alien can attack
+    public float speed = 2f;
+    public float attackRange = 0.5f;
 
     private bool isAttacking = false;
+    private Coroutine moveCoroutine;
 
-    // Start is called before the first frame update
     protected virtual void Start()
     {
         Debug.Log("Alien");
-        // Start moving the alien
-        StartCoroutine(Move());
+        StartMoving();
     }
 
     public virtual void Init(Transform spawnPoint)
@@ -27,27 +26,30 @@ public class Alien : MonoBehaviour
         this.spawnPoint = spawnPoint;
     }
 
+    private void StartMoving()
+    {
+        moveCoroutine = StartCoroutine(Move());
+    }
+
     IEnumerator Move()
     {
-        while (!isAttacking)
+        while (true)
         {
-            // Move the alien from right to left
-            transform.position += Vector3.left * speed * Time.deltaTime;
-
-            // Check if there is any pet within attack range
-            CheckAttack();
-
+            if (!isAttacking)
+            {
+                transform.position += Vector3.left * speed * Time.deltaTime;
+                CheckAttack();
+            }
             yield return null;
         }
     }
 
     void CheckAttack()
     {
-        // Detect any potential pets within the attack range
         Collider2D[] hitPets = Physics2D.OverlapCircleAll(transform.position, attackRange);
         foreach (Collider2D pet in hitPets)
         {
-            if (pet.CompareTag("Pet")) // Ensure the pet has the correct tag
+            if (pet.CompareTag("Pet"))
             {
                 isAttacking = true;
                 StartCoroutine(Attack(pet.GetComponent<Pet>()));
@@ -61,7 +63,7 @@ public class Alien : MonoBehaviour
         while (pet != null && health > 0)
         {
             pet.TakeDamage(attackPower);
-            yield return new WaitForSeconds(1f); // Attack every second
+            yield return new WaitForSeconds(1f);
         }
         isAttacking = false;
     }
@@ -80,13 +82,26 @@ public class Alien : MonoBehaviour
     protected virtual void Die()
     {
         Debug.Log("Alien died");
-        FindObjectOfType<SpawnerAlien>().RevertSpawnPoint(spawnPoint); // Revert the spawn point state
+        FindObjectOfType<SpawnerAlien>().RevertSpawnPoint(spawnPoint);
+        if (gameObject.name == "DittoAlien")
+        {
+            FindObjectOfType<SpawnerAlien>().NotifyDittoDeath(spawnPoint);
+        }
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Outbound"))
+        {
+            Debug.Log("Alien reached outbound");
+            Destroy(gameObject);
+        }
     }
 
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange); // Visualize the attack range in the editor
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }
