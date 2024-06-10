@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7172316852112611381}
   - component: {fileID: -7831461436561792066}
   - component: {fileID: -5679520350970870238}
+  - component: {fileID: -5475222698938198024}
   m_Layer: 0
   m_Name: cat
   m_TagString: Pet
@@ -121,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2d446bc6e8a64547b02909bcb292e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 15
   cost: 0
 --- !u!61 &7172316852112611381
 BoxCollider2D:
@@ -180,10 +181,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d420d6550425d34e9dd136d85d6ea45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 5
   cost: 0
-  currencyPerInterval: 5
-  productionInterval: 5
+  sunsPerInterval: 5
+  sunProductionInterval: 5
+  sunPrefab: {fileID: 841430407189535848, guid: 95bf405e8313ef84996b6565f1a5ff86, type: 3}
 --- !u!114 &-5679520350970870238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,3 +216,15 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
+--- !u!114 &-5475222698938198024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7136392491641645078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b40c9d5f7dc4c24faf29c4434ed0209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

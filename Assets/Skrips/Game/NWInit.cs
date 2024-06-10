@@ -10,9 +10,11 @@ public class NetworkInitializer : MonoBehaviour
 
     void Start()
     {
-        hostButton.onClick.AddListener(StartHost);
-        clientButton.onClick.AddListener(StartClient);
-        serverButton.onClick.AddListener(StartServer);
+        // already defined in test.cs
+
+        //hostButton.onClick.AddListener(StartHost);
+        //clientButton.onClick.AddListener(StartClient);
+        //serverButton.onClick.AddListener(StartServer);
     }
 
     void StartHost()

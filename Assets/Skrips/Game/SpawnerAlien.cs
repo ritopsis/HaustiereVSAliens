@@ -92,7 +92,7 @@ public class SpawnerAlien : NetworkBehaviour
         return true;
     }
 
-    [ServerRpc]
+    [ServerRpc(RequireOwnership = false)]
     void RequestSpawnAlienServerRpc(int id, Vector3 position, ulong spawnPointId)
     {
         SpawnAlienClientRpc(id, position, spawnPointId);

@@ -26,9 +26,7 @@ public class CurrencyManager : NetworkBehaviour
 
     void Start()
     {
-        petCurrency.OnValueChanged += OnPetCurrencyChanged;
-        alienCurrency.OnValueChanged += OnAlienCurrencyChanged;
-        UpdateCurrencyUI();
+        
     }
 
     public void AddPetCurrency(int amount)
@@ -36,6 +34,7 @@ public class CurrencyManager : NetworkBehaviour
         if (IsServer)
         {
             petCurrency.Value += amount;
+            UpdateCurrencyUI();
         }
     }
 
@@ -44,6 +43,7 @@ public class CurrencyManager : NetworkBehaviour
         if (IsServer)
         {
             alienCurrency.Value += amount;
+            UpdateCurrencyUI();
         }
     }
 
@@ -57,15 +57,6 @@ public class CurrencyManager : NetworkBehaviour
         return alienCurrency.Value;
     }
 
-    private void OnPetCurrencyChanged(int oldValue, int newValue)
-    {
-        UpdateCurrencyUI();
-    }
-
-    private void OnAlienCurrencyChanged(int oldValue, int newValue)
-    {
-        UpdateCurrencyUI();
-    }
 
     private void UpdateCurrencyUI()
     {
