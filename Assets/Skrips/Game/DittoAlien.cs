@@ -45,7 +45,7 @@ public class DittoAlien : Alien
     [ClientRpc]
     void ProduceSlimeClientRpc(int amount)
     {
-        
+        CurrencyManager.instance.AddAlienCurrency(amount);
     }
 
 }

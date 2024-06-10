@@ -1864,6 +1864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &495829643 stripped
@@ -1884,6 +1885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1001 &510575928
@@ -2755,6 +2757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &630595432 stripped
@@ -2775,6 +2778,7 @@ GameObject:
   - component: {fileID: 649439877}
   - component: {fileID: 649439879}
   - component: {fileID: 649439881}
+  - component: {fileID: 649439882}
   m_Layer: 0
   m_Name: _Scripts
   m_TagString: Untagged
@@ -2799,6 +2803,7 @@ MonoBehaviour:
   - {fileID: 7136392491641645078, guid: 908d007dba9281c4b8f9d11c78894198, type: 3}
   - {fileID: 6534960445801754736, guid: e93ae4b561499a347a3e78a9b4ddf4ab, type: 3}
   - {fileID: 3664694891473496737, guid: 0f2444dc9d783784c81920b91c5ec2ee, type: 3}
+  pets: []
   spawnPetRoot: {fileID: 1842663757}
   petsUI:
   - {fileID: 9208404304717307519}
@@ -2878,6 +2883,19 @@ MonoBehaviour:
   hostButton: {fileID: 0}
   clientButton: {fileID: 0}
   serverButton: {fileID: 0}
+--- !u!114 &649439882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649439876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2244b36078c797409ab098d4a46ff0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardPrefabs: []
 --- !u!1 &649683926 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4315433674794181511, guid: 3f5c9034a99d25840ad30bfbe72dbca6, type: 3}
@@ -2901,6 +2919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1001 &679039023
@@ -3033,6 +3052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1001 &738112634
@@ -3287,6 +3307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &786270577
@@ -3705,6 +3726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &820647276
@@ -3958,6 +3980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &871031046 stripped
@@ -4268,6 +4291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc2878da7c55b4a82797741929c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  petCurrency: 10
+  alienCurrency: 10
   petCurrencyText: {fileID: 0}
   alienCurrencyText: {fileID: 892279566}
 --- !u!114 &892279566
@@ -4290,7 +4315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5256,6 +5281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &1005124152 stripped
@@ -6086,6 +6112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1001 &1330013832
@@ -6344,6 +6371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &1365708776
@@ -7161,6 +7189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &1466702655 stripped
@@ -7259,6 +7288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc2878da7c55b4a82797741929c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  petCurrency: 10
+  alienCurrency: 10
   petCurrencyText: {fileID: 1520694564}
   alienCurrencyText: {fileID: 0}
 --- !u!114 &1520694564
@@ -7281,7 +7312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7565,6 +7596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1001 &1541156963
@@ -7823,6 +7855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &1553239143 stripped
@@ -7843,6 +7876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &1559278789 stripped
@@ -7863,6 +7897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &1567392740
@@ -8263,6 +8298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1001 &1621052276
@@ -8395,6 +8431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &1624555615 stripped
@@ -8690,6 +8727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1001 &1768026714
@@ -8822,6 +8860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &1802694519 stripped
@@ -8842,6 +8881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &1839510876
@@ -9080,6 +9120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &1877175978 stripped
@@ -9100,6 +9141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1001 &1882536530
@@ -9246,6 +9288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &1910038977
@@ -9524,6 +9567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &1943687384
@@ -9676,6 +9720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1001 &1958431887
@@ -9808,6 +9853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &1979995794 stripped
@@ -9828,6 +9874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1 &2001780335 stripped
@@ -9965,6 +10012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!224 &2056079227 stripped
@@ -10959,6 +11007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petsPrefabs: []
+  pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
 --- !u!1001 &8329624941241655693

@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 40
-  cost: 0
+  cost: 20
   attackPower: 4
   speed: 2
   attackRange: 0.5

@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
-  cost: 0
+  cost: 10
 --- !u!61 &7546176640380643079
 BoxCollider2D:
   m_ObjectHideFlags: 0

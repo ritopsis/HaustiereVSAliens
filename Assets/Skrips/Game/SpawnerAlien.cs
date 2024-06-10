@@ -30,6 +30,7 @@ public class SpawnerAlien : NetworkBehaviour
         {
             spawnPoints.Add(obj.transform);
         }
+        CurrencyManager.instance.OnCurrencyChanged += UpdatePetCardsUI;
     }
 
     void Update()
@@ -99,6 +100,9 @@ public class SpawnerAlien : NetworkBehaviour
         alien.transform.position = position;
         alien.GetComponent<NetworkObject>().Spawn();
 
+        Alien alienObject = alien.GetComponent<Alien>();
+        CurrencyManager.instance.SubtractAlienCurrency(alienObject.cost);
+
         Transform spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
         alien.GetComponent<Alien>().Init(spawnPoint);
 
@@ -108,11 +112,16 @@ public class SpawnerAlien : NetworkBehaviour
         }
 
         SpawnAlienClientRpc(id, position, spawnPointId);
+
+        DeselectAliens();
     }
 
     [ClientRpc]
     void SpawnAlienClientRpc(int id, Vector3 position, ulong spawnPointId)
     {
+        CurrencyManager.instance.SubtractAlienCurrency(
+            aliensPrefabs[id].GetComponent<Alien>().cost
+        );
         DeselectAliens();
     }
 
@@ -131,23 +140,42 @@ public class SpawnerAlien : NetworkBehaviour
         spawnPoint.gameObject.SetActive(true);
     }
 
+    public void UpdatePetCardsUI()
+    {
+        for (int i = 0; i < aliensUI.Count; i++)
+        {
+            Alien alien = aliensPrefabs[i].GetComponent<Alien>();
+            if (CurrencyManager.instance.GetPetCurrency() < alien.cost)
+            {
+                aliensUI[i].color = Color.grey;
+            }
+        }
+    }
+
     public void SelectAlien(int id)
     {
         if (id >= 0 && id < aliensPrefabs.Count)
         {
-            spawnID = id;
-            // Highlight the selected alien UI
-            for (int i = 0; i < aliensUI.Count; i++)
+            Alien alien = aliensPrefabs[id].GetComponent<Alien>();
+            if (CurrencyManager.instance.GetAlienCurrency() >= alien.cost)
             {
-                if (i == id)
+                spawnID = id;
+                // Highlight the selected alien UI
+                for (int i = 0; i < aliensUI.Count; i++)
                 {
-                    aliensUI[i].color = Color.green; // Or any other color to indicate selection
-                }
-                else
-                {
-                    aliensUI[i].color = Color.white;
+
+                    if (i == id)
+                    {
+                        aliensUI[i].color = Color.green; // Or any other color to indicate selection
+                    }
+                    else
+                    {
+                        aliensUI[i].color = Color.white;
+                    }
                 }
             }
+
+            
         }
     }
 

@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using Unity.Netcode;
+using System;
 
 public class CurrencyManager : NetworkBehaviour
 {
@@ -9,10 +10,12 @@ public class CurrencyManager : NetworkBehaviour
     //private NetworkVariable<int> petCurrency = new NetworkVariable<int>();
     //private NetworkVariable<int> alienCurrency = new NetworkVariable<int>();
 
-    private int petCurrency = 0;
-    private int alienCurrency = 0;
+    public int petCurrency = 10;
+    public int alienCurrency = 10;
     public TMP_Text petCurrencyText; // Reference to the TextMeshPro component for pet currency
     public TMP_Text alienCurrencyText; // Reference to the TextMeshPro component for alien currency
+
+    public event Action OnCurrencyChanged = delegate { };
 
     void Awake()
     {
@@ -39,6 +42,7 @@ public class CurrencyManager : NetworkBehaviour
         //{
             petCurrency+= amount;
             UpdateCurrencyUI();
+            OnCurrencyChanged();
             Debug.Log("Add pet currency");
         //}
     }
@@ -50,7 +54,22 @@ public class CurrencyManager : NetworkBehaviour
         //{
             alienCurrency += amount;
             UpdateCurrencyUI();
+            OnCurrencyChanged();
         //}
+    }
+
+    public void SubtractPetCurrency(int amount) 
+    {
+        petCurrency -= amount; 
+        UpdateCurrencyUI();
+        OnCurrencyChanged();
+    }
+
+    public void SubtractAlienCurrency(int amount)
+    {
+        alienCurrency -= amount;
+        UpdateCurrencyUI();
+        OnCurrencyChanged();
     }
 
     public int GetPetCurrency()

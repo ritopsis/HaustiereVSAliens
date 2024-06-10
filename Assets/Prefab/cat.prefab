@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 771723169
+  GlobalObjectIdHash: 271305696
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 1
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 15
-  cost: 0
+  cost: 10
 --- !u!61 &7172316852112611381
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -181,9 +181,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  cost: 0
+  cost: 10
   sunsPerInterval: 5
-  sunProductionInterval: 10
+  sunProductionInterval: 8
   sunPrefab: {fileID: 841430407189535848, guid: 95bf405e8313ef84996b6565f1a5ff86, type: 3}
   sunLifetime: 2
 --- !u!114 &-5679520350970870238

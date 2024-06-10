@@ -49,7 +49,7 @@ public class Pet_Kitty : Pet
     [ClientRpc]
     void ProduceSunClientRpc(int amount)
     {
-        
+        CurrencyManager.instance.AddPetCurrency(amount);
     }
 
 

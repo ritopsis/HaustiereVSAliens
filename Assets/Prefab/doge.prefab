@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 15
-  cost: 0
+  cost: 15
 --- !u!114 &2023103638741247065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  cost: 0
+  cost: 15
   projectilePrefab: {fileID: 839311239402900860, guid: ef03beb6c694d5a408efc811fde06025, type: 3}
   attackCooldown: 1
   attackRange: 30

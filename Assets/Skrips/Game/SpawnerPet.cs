@@ -7,6 +7,7 @@ using Unity.Netcode;
 public class SpawnerPet : NetworkBehaviour
 {
     public List<GameObject> petsPrefabs;
+    public List<Pet> pets;
     public Transform spawnPetRoot;
     public List<Image> petsUI;
     int spawnID = -1;
@@ -20,6 +21,9 @@ public class SpawnerPet : NetworkBehaviour
         {
             spawnPoints.Add(obj.transform);
         }
+        Debug.Log("CurrencyManager.instance: " + CurrencyManager.instance == null);
+        CurrencyManager.instance.OnCurrencyChanged += UpdatePetCardsUI;
+
     }
 
     void Update()
@@ -54,7 +58,7 @@ public class SpawnerPet : NetworkBehaviour
                 }
             }
 
-            if (selectedSpawnPoint != null)
+            if (selectedSpawnPoint != null && spawnID != -1)
             {
                 RequestSpawnPetServerRpc(spawnID, selectedSpawnPoint.position, selectedSpawnPoint.GetComponent<NetworkObject>().NetworkObjectId);
                 spawnPoints.Remove(selectedSpawnPoint);
@@ -70,8 +74,11 @@ public class SpawnerPet : NetworkBehaviour
         var networkObject = pet.GetComponent<NetworkObject>();
         networkObject.Spawn();
 
-        pet.GetComponent<Pet>().Init(NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform);
+        Pet petObject = pet.GetComponent<Pet>();
+        CurrencyManager.instance.SubtractPetCurrency(petObject.cost);
+        petObject.Init(NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform);
         NotifySpawnPetClientRpc(pet.GetComponent<NetworkObject>().NetworkObjectId, spawnPointId);
+        DeselectPets();
     }
 
     [ClientRpc]
@@ -82,8 +89,8 @@ public class SpawnerPet : NetworkBehaviour
         var pet = NetworkManager.Singleton.SpawnManager.SpawnedObjects[petNetworkObjectId].GetComponent<Pet>();
         var spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
         pet.Init(spawnPoint);
-
         DeselectPets();
+
     }
 
     void DeselectPets()
@@ -101,24 +108,49 @@ public class SpawnerPet : NetworkBehaviour
         spawnPoint.gameObject.SetActive(true);
     }
 
+    public void UpdatePetCardsUI()
+    {
+        for(int i = 0; i < petsUI.Count; i++)
+        {
+            Pet pet = petsPrefabs[i].GetComponent<Pet>();
+            if (CurrencyManager.instance.GetPetCurrency() < pet.cost)
+            {
+                petsUI[i].color = Color.grey;
+            }
+        }
+    }
+
     public void SelectPet(int id)
     {
         if (id >= 0 && id < petsPrefabs.Count)
         {
-            spawnID = id;
-            for (int i = 0; i < petsUI.Count; i++)
+            Pet pet = petsPrefabs[id].GetComponent<Pet>();
+            if (CurrencyManager.instance.GetPetCurrency() >= pet.cost)
             {
-                if (i == id)
+                spawnID = id;
+                for (int i = 0; i < petsUI.Count; i++)
                 {
-                    petsUI[i].color = Color.green;
-                }
-                else
-                {
-                    petsUI[i].color = Color.white;
+                    if (i == id)
+                    {
+                        petsUI[i].color = Color.green;
+                    }
+                    else
+                    {
+                        petsUI[i].color = Color.white;
+                    }
                 }
             }
+            else
+            {
+
+                Debug.Log("Not enough currency to spawn this pet which costs " + pet.cost + " and you have " + CurrencyManager.instance.GetPetCurrency());
+
+            }
+            
         }
     }
+
+
 }
 
 
