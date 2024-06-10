@@ -6,9 +6,11 @@ public class CurrencyManager : NetworkBehaviour
 {
     public static CurrencyManager instance;
 
-    private NetworkVariable<int> petCurrency = new NetworkVariable<int>();
-    private NetworkVariable<int> alienCurrency = new NetworkVariable<int>();
+    //private NetworkVariable<int> petCurrency = new NetworkVariable<int>();
+    //private NetworkVariable<int> alienCurrency = new NetworkVariable<int>();
 
+    private int petCurrency = 0;
+    private int alienCurrency = 0;
     public TMP_Text petCurrencyText; // Reference to the TextMeshPro component for pet currency
     public TMP_Text alienCurrencyText; // Reference to the TextMeshPro component for alien currency
 
@@ -29,32 +31,36 @@ public class CurrencyManager : NetworkBehaviour
         
     }
 
+    
     public void AddPetCurrency(int amount)
     {
-        if (IsServer)
-        {
-            petCurrency.Value += amount;
+       
+        //if (IsServer)
+        //{
+            petCurrency+= amount;
             UpdateCurrencyUI();
-        }
+            Debug.Log("Add pet currency");
+        //}
     }
 
     public void AddAlienCurrency(int amount)
     {
-        if (IsServer)
-        {
-            alienCurrency.Value += amount;
+        
+        //if (IsServer)
+        //{
+            alienCurrency += amount;
             UpdateCurrencyUI();
-        }
+        //}
     }
 
     public int GetPetCurrency()
     {
-        return petCurrency.Value;
+        return petCurrency;
     }
 
     public int GetAlienCurrency()
     {
-        return alienCurrency.Value;
+        return alienCurrency;
     }
 
 
@@ -62,14 +68,14 @@ public class CurrencyManager : NetworkBehaviour
     {
         if (petCurrencyText != null)
         {
-            petCurrencyText.text = "Pet Currency: " + petCurrency.Value;
+            petCurrencyText.text = petCurrency.ToString();
         }
 
         if (alienCurrencyText != null)
         {
-            alienCurrencyText.text = "Alien Currency: " + alienCurrency.Value;
+            alienCurrencyText.text = alienCurrency.ToString();
         }
 
-        Debug.Log("Pet Currency: " + petCurrency.Value + " | Alien Currency: " + alienCurrency.Value);
+        Debug.Log("Pet Currency: " + petCurrency + " | Alien Currency: " + alienCurrency);
     }
 }

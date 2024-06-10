@@ -28,13 +28,13 @@ public class Test : NetworkBehaviour
 
         if (CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value == LobbyManager.PlayerCharacter.Haustiere.ToString())
         {
-            haustierplayer.text = CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value;
-            alienplayer.text = CurrentGame.otherPlayer.Data[LobbyManager.KEY_USERNAME].Value;
+            //haustierplayer.text = CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value;
+            //alienplayer.text = CurrentGame.otherPlayer.Data[LobbyManager.KEY_USERNAME].Value;
         }
         else
         {
-            alienplayer.text = CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value;
-            haustierplayer.text = CurrentGame.otherPlayer.Data[LobbyManager.KEY_USERNAME].Value;
+            //alienplayer.text = CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value;
+            //haustierplayer.text = CurrentGame.otherPlayer.Data[LobbyManager.KEY_USERNAME].Value;
         }
 
         loadTroopsPanel();

@@ -35,6 +35,7 @@ public class Pet_Kitty : Pet
     void ProduceSunServerRpc(int amount)
     {
         ProduceSunClientRpc(amount);
+        
     }
 
     [ClientRpc]
@@ -44,9 +45,7 @@ public class Pet_Kitty : Pet
         Vector3 spawnPosition = transform.position + spawnOffset;
         GameObject sun = Instantiate(sunPrefab, spawnPosition, Quaternion.identity);
         sun.GetComponent<NetworkObject>().Spawn();
-     
         CurrencyManager.instance.AddPetCurrency(amount);
-
         Debug.Log("produced sun serverRpC: " + sun);
         Destroy(sun, sunLifetime);
     }
