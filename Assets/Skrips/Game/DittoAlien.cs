@@ -31,19 +31,21 @@ public class DittoAlien : Alien
     [ServerRpc]
     private void ProduceSlimeServerRpc(int amount)
     {
-        ProduceSlimeClientRpc(amount);
-    }
-
-    [ClientRpc]
-    void ProduceSlimeClientRpc(int amount)
-    {
-        Vector3 spawnOffset = new Vector3(-0.10f, 0.20f, 0f);
+        Vector3 spawnOffset = new Vector3(-0.10f, 0.33f, 0f);
         Vector3 spawnPosition = transform.position + spawnOffset;
         GameObject slime = Instantiate(slimePrefab, spawnPosition, Quaternion.identity);
         slime.GetComponent<NetworkObject>().Spawn();
         CurrencyManager.instance.AddAlienCurrency(amount);
         Debug.Log("produced slime serverRpC: " + slime);
         Destroy(slime, slimeLifetime);
+
+        ProduceSlimeClientRpc(amount);
+    }
+
+    [ClientRpc]
+    void ProduceSlimeClientRpc(int amount)
+    {
+        
     }
 
 }

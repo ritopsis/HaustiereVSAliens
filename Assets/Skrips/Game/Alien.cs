@@ -53,7 +53,7 @@ public class Alien : NetworkBehaviour
     void UpdatePositionServerRpc(Vector3 newPosition)
     {
         transform.position = newPosition;
-        UpdatePositionClientRpc(newPosition); // Call the Client RPC
+        UpdatePositionClientRpc(newPosition);
     }
 
     [ClientRpc]
