@@ -95,12 +95,6 @@ public class SpawnerAlien : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     void RequestSpawnAlienServerRpc(int id, Vector3 position, ulong spawnPointId)
     {
-        SpawnAlienClientRpc(id, position, spawnPointId);
-    }
-
-    [ClientRpc]
-    void SpawnAlienClientRpc(int id, Vector3 position, ulong spawnPointId)
-    {
         GameObject alien = Instantiate(aliensPrefabs[id], spawnAlienRoot);
         alien.transform.position = position;
         alien.GetComponent<NetworkObject>().Spawn();
@@ -113,6 +107,12 @@ public class SpawnerAlien : NetworkBehaviour
             dittoAliens[spawnPoint] = alien;
         }
 
+        SpawnAlienClientRpc(id, position, spawnPointId);
+    }
+
+    [ClientRpc]
+    void SpawnAlienClientRpc(int id, Vector3 position, ulong spawnPointId)
+    {
         DeselectAliens();
     }
 

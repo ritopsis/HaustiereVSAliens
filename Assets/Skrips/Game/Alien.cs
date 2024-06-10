@@ -41,11 +41,25 @@ public class Alien : NetworkBehaviour
         {
             if (!isAttacking)
             {
-                transform.position += Vector3.left * speed * Time.deltaTime;
+                Vector3 newPosition = transform.position + Vector3.left * speed * Time.deltaTime;
+                UpdatePositionServerRpc(newPosition); 
                 CheckAttack();
             }
             yield return null;
         }
+    }
+
+    [ServerRpc]
+    void UpdatePositionServerRpc(Vector3 newPosition)
+    {
+        transform.position = newPosition;
+        UpdatePositionClientRpc(newPosition); // Call the Client RPC
+    }
+
+    [ClientRpc]
+    void UpdatePositionClientRpc(Vector3 newPosition)
+    {
+        transform.position = newPosition;
     }
 
     void CheckAttack()

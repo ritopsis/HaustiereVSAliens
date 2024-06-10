@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 4246643472
+  GlobalObjectIdHash: 1515800420
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
@@ -215,5 +215,7 @@ MonoBehaviour:
   attackPower: 10
   speed: 2
   attackRange: 0.5
-  currencyPerInterval: 5
-  productionInterval: 5
+  slimePerInterval: 5
+  slimeProductionInterval: 10
+  slimePrefab: {fileID: 8499907320539009384, guid: 1290687d148e1e2449d8671d45ae11b9, type: 3}
+  slimeLifetime: 2
