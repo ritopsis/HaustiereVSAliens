@@ -67,13 +67,22 @@ public class SpawnerAlien : NetworkBehaviour
                 }
             }
 
-            if (selectedSpawnPoint != null)
+            if (selectedSpawnPoint != null && CanSpawn())
             {
+
                 if (CanSpawnDitto(selectedSpawnPoint))
                 {
-                    RequestSpawnAlienServerRpc(spawnID, selectedSpawnPoint.position, selectedSpawnPoint.GetComponent<NetworkObject>().NetworkObjectId);
-                    spawnPoints.Remove(selectedSpawnPoint);
-                    selectedSpawnPoint.gameObject.SetActive(false);
+                    Alien alien = aliensPrefabs[spawnID].GetComponent<Alien>();
+                    if (CurrencyManager.instance.GetAlienCurrency() >= alien.cost)
+                    {
+                        RequestSpawnAlienServerRpc(spawnID, selectedSpawnPoint.position, selectedSpawnPoint.GetComponent<NetworkObject>().NetworkObjectId);
+                        spawnPoints.Remove(selectedSpawnPoint);
+                        selectedSpawnPoint.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        Debug.Log("Not enough currency to spawn this pet which costs " + alien.cost + " and you have " + CurrencyManager.instance.GetAlienCurrency());
+                    }
                 }
             }
         }
@@ -157,23 +166,22 @@ public class SpawnerAlien : NetworkBehaviour
         if (id >= 0 && id < aliensPrefabs.Count)
         {
             Alien alien = aliensPrefabs[id].GetComponent<Alien>();
-            if (CurrencyManager.instance.GetAlienCurrency() >= alien.cost)
+            
+            spawnID = id;
+            // Highlight the selected alien UI
+            for (int i = 0; i < aliensUI.Count; i++)
             {
-                spawnID = id;
-                // Highlight the selected alien UI
-                for (int i = 0; i < aliensUI.Count; i++)
-                {
 
-                    if (i == id)
-                    {
-                        aliensUI[i].color = Color.green; // Or any other color to indicate selection
-                    }
-                    else
-                    {
-                        aliensUI[i].color = Color.white;
-                    }
+                if (i == id)
+                {
+                    aliensUI[i].color = Color.green; // Or any other color to indicate selection
+                }
+                else
+                {
+                    aliensUI[i].color = Color.white;
                 }
             }
+            
 
             
         }

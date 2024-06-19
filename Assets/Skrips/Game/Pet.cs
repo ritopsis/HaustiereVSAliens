@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
+using System;
 
 public class Pet : NetworkBehaviour
 {
     public int health;
     public int cost;
     private Transform spawnPoint;
+    // event Action<Pet> OnDeath;
+
 
     protected virtual void Start()
     {
@@ -43,8 +46,11 @@ public class Pet : NetworkBehaviour
         if (IsServer)
         {
             FindObjectOfType<SpawnerPet>().RevertSpawnPoint(spawnPoint);
+            //OnDeath?.Invoke(this);
             Destroy(gameObject);
         }
+
+
     }
 }
 

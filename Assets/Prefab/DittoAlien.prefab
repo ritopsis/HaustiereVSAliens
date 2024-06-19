@@ -215,7 +215,7 @@ MonoBehaviour:
   attackPower: 0
   speed: 0
   attackRange: 0.5
-  slimePerInterval: 5
-  slimeProductionInterval: 10
+  slimePerInterval: 10
+  slimeProductionInterval: 8
   slimePrefab: {fileID: 8499907320539009384, guid: 1290687d148e1e2449d8671d45ae11b9, type: 3}
   slimeLifetime: 2

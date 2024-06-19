@@ -58,11 +58,20 @@ public class SpawnerPet : NetworkBehaviour
                 }
             }
 
-            if (selectedSpawnPoint != null && spawnID != -1)
+            if (selectedSpawnPoint != null && CanSpawn())
             {
-                RequestSpawnPetServerRpc(spawnID, selectedSpawnPoint.position, selectedSpawnPoint.GetComponent<NetworkObject>().NetworkObjectId);
-                spawnPoints.Remove(selectedSpawnPoint);
-                selectedSpawnPoint.gameObject.SetActive(false);
+                Pet pet = petsPrefabs[spawnID].GetComponent<Pet>();
+                if (CurrencyManager.instance.GetPetCurrency() >= pet.cost)
+                {
+                    RequestSpawnPetServerRpc(spawnID, selectedSpawnPoint.position, selectedSpawnPoint.GetComponent<NetworkObject>().NetworkObjectId);
+                    spawnPoints.Remove(selectedSpawnPoint);
+                    selectedSpawnPoint.gameObject.SetActive(false);
+                }
+                else
+                {
+                    Debug.Log("Not enough currency to spawn this pet which costs " + pet.cost + " and you have " + CurrencyManager.instance.GetPetCurrency());
+                }
+              
             }
         }
     }
@@ -77,6 +86,8 @@ public class SpawnerPet : NetworkBehaviour
         Pet petObject = pet.GetComponent<Pet>();
         CurrencyManager.instance.SubtractPetCurrency(petObject.cost);
         petObject.Init(NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform);
+        //petObject.OnDeath += HandlePetDeath; // Subscribe to the death event
+
         NotifySpawnPetClientRpc(pet.GetComponent<NetworkObject>().NetworkObjectId, spawnPointId);
         DeselectPets();
     }
@@ -108,6 +119,15 @@ public class SpawnerPet : NetworkBehaviour
         spawnPoint.gameObject.SetActive(true);
     }
 
+    //private void HandlePetDeath(Pet pet)
+    //{
+    //    Transform spawnPoint = pet.transform.parent;
+    //    spawnPoints.Add(spawnPoint);
+    //    spawnPoint.gameObject.SetActive(true);
+    //    pet.OnDeath -= HandlePetDeath; // Unsubscribe from the death event
+    //    Debug.Log("handle pet death");
+    //}
+
     public void UpdatePetCardsUI()
     {
         for(int i = 0; i < petsUI.Count; i++)
@@ -124,28 +144,21 @@ public class SpawnerPet : NetworkBehaviour
     {
         if (id >= 0 && id < petsPrefabs.Count)
         {
-            Pet pet = petsPrefabs[id].GetComponent<Pet>();
-            if (CurrencyManager.instance.GetPetCurrency() >= pet.cost)
+            
+            spawnID = id;
+            for (int i = 0; i < petsUI.Count; i++)
             {
-                spawnID = id;
-                for (int i = 0; i < petsUI.Count; i++)
+                if (i == id)
                 {
-                    if (i == id)
-                    {
-                        petsUI[i].color = Color.green;
-                    }
-                    else
-                    {
-                        petsUI[i].color = Color.white;
-                    }
+                    petsUI[i].color = Color.green;
+                }
+                else
+                {
+                    petsUI[i].color = Color.white;
                 }
             }
-            else
-            {
-
-                Debug.Log("Not enough currency to spawn this pet which costs " + pet.cost + " and you have " + CurrencyManager.instance.GetPetCurrency());
-
-            }
+            
+            
             
         }
     }
