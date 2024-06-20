@@ -61,18 +61,16 @@ public class SpawnerAlien : NetworkBehaviour
             float minDistance = float.MaxValue;
             foreach (var spawnPoint in spawnPoints)
             {
-                if (spawnPoint.gameObject.activeInHierarchy)
+                float distance = Vector3.Distance(mousePos, spawnPoint.position);
+                if (distance < minDistance)
                 {
-                    float distance = Vector3.Distance(mousePos, spawnPoint.position);
-                    if (distance < minDistance)
-                    {
-                        minDistance = distance;
-                        selectedSpawnPoint = spawnPoint;
-                    }
+                    minDistance = distance;
+                    selectedSpawnPoint = spawnPoint;
                 }
+                
             }
 
-            if (selectedSpawnPoint != null && CanSpawn())
+            if (selectedSpawnPoint != null && selectedSpawnPoint.gameObject.activeInHierarchy && CanSpawn())
             {
 
                 if (CanSpawnDitto(selectedSpawnPoint))
@@ -134,6 +132,9 @@ public class SpawnerAlien : NetworkBehaviour
     [ClientRpc]
     void SpawnAlienClientRpc(int id, Vector3 position, ulong spawnPointId)
     {
+        Transform spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
+        spawnPoint.gameObject.SetActive(false);
+
         CurrencyManager.instance.SubtractAlienCurrency(
             aliensPrefabs[id].GetComponent<Alien>().cost
         );
@@ -151,6 +152,14 @@ public class SpawnerAlien : NetworkBehaviour
 
     [ServerRpc(RequireOwnership = false)]
     public void RevertSpawnPointServerRpc(ulong spawnPointId)
+    {
+        var spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
+        spawnPoint.gameObject.SetActive(true);
+        RevertSpawnPointClientRpc(spawnPointId);
+    }
+
+    [ClientRpc]
+    public void RevertSpawnPointClientRpc(ulong spawnPointId)
     {
         var spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
         spawnPoint.gameObject.SetActive(true);
