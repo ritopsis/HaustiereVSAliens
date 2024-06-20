@@ -50,12 +50,17 @@ public class SpawnerPet : NetworkBehaviour
             float minDistance = float.MaxValue;
             foreach (var spawnPoint in spawnPoints)
             {
-                float distance = Vector3.Distance(mousePos, spawnPoint.position);
-                if (distance < minDistance)
+                if(spawnPoint.gameObject.activeInHierarchy)
                 {
-                    minDistance = distance;
-                    selectedSpawnPoint = spawnPoint;
+                    Debug.Log("available spawn Point: " + spawnPoint.gameObject.name);
+                    float distance = Vector3.Distance(mousePos, spawnPoint.position);
+                    if (distance < minDistance)
+                    {
+                        minDistance = distance;
+                        selectedSpawnPoint = spawnPoint;
+                    }
                 }
+                
             }
 
             if (selectedSpawnPoint != null && CanSpawn())
@@ -64,8 +69,11 @@ public class SpawnerPet : NetworkBehaviour
                 if (CurrencyManager.instance.GetPetCurrency() >= pet.cost)
                 {
                     RequestSpawnPetServerRpc(spawnID, selectedSpawnPoint.position, selectedSpawnPoint.GetComponent<NetworkObject>().NetworkObjectId);
-                    spawnPoints.Remove(selectedSpawnPoint);
+                    Debug.Log("removed spawn point: " + selectedSpawnPoint.gameObject.name);
+                    
+                    
                     selectedSpawnPoint.gameObject.SetActive(false);
+                    Debug.Log("is Point active: " + selectedSpawnPoint.gameObject.activeInHierarchy);
                 }
                 else
                 {
@@ -85,8 +93,12 @@ public class SpawnerPet : NetworkBehaviour
 
         Pet petObject = pet.GetComponent<Pet>();
         CurrencyManager.instance.SubtractPetCurrency(petObject.cost);
-        petObject.Init(NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform);
-        //petObject.OnDeath += HandlePetDeath; // Subscribe to the death event
+
+        Transform spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
+        spawnPoint.gameObject.SetActive(false);
+
+        petObject.Init(spawnPoint);
+
 
         NotifySpawnPetClientRpc(pet.GetComponent<NetworkObject>().NetworkObjectId, spawnPointId);
         DeselectPets();
@@ -113,9 +125,10 @@ public class SpawnerPet : NetworkBehaviour
         }
     }
 
-    public void RevertSpawnPoint(Transform spawnPoint)
+    [ServerRpc(RequireOwnership = false)]
+    public void RevertSpawnPointServerRpc(ulong spawnPointId)
     {
-        spawnPoints.Add(spawnPoint);
+        var spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
         spawnPoint.gameObject.SetActive(true);
     }
 

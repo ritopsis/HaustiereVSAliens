@@ -45,8 +45,7 @@ public class Pet : NetworkBehaviour
         Debug.Log("Pet died");
         if (IsServer)
         {
-            FindObjectOfType<SpawnerPet>().RevertSpawnPoint(spawnPoint);
-            //OnDeath?.Invoke(this);
+            FindObjectOfType<SpawnerPet>().RevertSpawnPointServerRpc(spawnPoint.GetComponent<NetworkObject>().NetworkObjectId);
             Destroy(gameObject);
         }
 

@@ -111,7 +111,7 @@ public class Alien : NetworkBehaviour
     protected virtual void Die()
     {
         Debug.Log("Alien died");
-        FindObjectOfType<SpawnerAlien>().RevertSpawnPoint(spawnPoint);
+        FindObjectOfType<SpawnerAlien>().RevertSpawnPointServerRpc(spawnPoint.GetComponent<NetworkObject>().NetworkObjectId);
         if (gameObject.name == "DittoAlien")
         {
             FindObjectOfType<SpawnerAlien>().NotifyDittoDeath(spawnPoint);

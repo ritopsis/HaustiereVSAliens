@@ -46,6 +46,8 @@ public class SpawnerAlien : NetworkBehaviour
         return spawnID != -1;
     }
 
+    
+
     void DetectSpawnPoint()
     {
         if (Input.GetMouseButtonDown(0))
@@ -59,11 +61,14 @@ public class SpawnerAlien : NetworkBehaviour
             float minDistance = float.MaxValue;
             foreach (var spawnPoint in spawnPoints)
             {
-                float distance = Vector3.Distance(mousePos, spawnPoint.position);
-                if (distance < minDistance)
+                if (spawnPoint.gameObject.activeInHierarchy)
                 {
-                    minDistance = distance;
-                    selectedSpawnPoint = spawnPoint;
+                    float distance = Vector3.Distance(mousePos, spawnPoint.position);
+                    if (distance < minDistance)
+                    {
+                        minDistance = distance;
+                        selectedSpawnPoint = spawnPoint;
+                    }
                 }
             }
 
@@ -76,8 +81,7 @@ public class SpawnerAlien : NetworkBehaviour
                     if (CurrencyManager.instance.GetAlienCurrency() >= alien.cost)
                     {
                         RequestSpawnAlienServerRpc(spawnID, selectedSpawnPoint.position, selectedSpawnPoint.GetComponent<NetworkObject>().NetworkObjectId);
-                        spawnPoints.Remove(selectedSpawnPoint);
-                        selectedSpawnPoint.gameObject.SetActive(false);
+                        //selectedSpawnPoint.gameObject.SetActive(false);
                     }
                     else
                     {
@@ -113,6 +117,8 @@ public class SpawnerAlien : NetworkBehaviour
         CurrencyManager.instance.SubtractAlienCurrency(alienObject.cost);
 
         Transform spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
+        spawnPoint.gameObject.SetActive(false);
+
         alien.GetComponent<Alien>().Init(spawnPoint);
 
         if (aliensPrefabs[id].name == "DittoAlien")
@@ -143,9 +149,10 @@ public class SpawnerAlien : NetworkBehaviour
         }
     }
 
-    public void RevertSpawnPoint(Transform spawnPoint)
+    [ServerRpc(RequireOwnership = false)]
+    public void RevertSpawnPointServerRpc(ulong spawnPointId)
     {
-        spawnPoints.Add(spawnPoint);
+        var spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
         spawnPoint.gameObject.SetActive(true);
     }
 
