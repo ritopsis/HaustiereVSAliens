@@ -123,7 +123,7 @@ MonoBehaviour:
   health: 25
   cost: 15
   attackPower: 10
-  speed: 2
+  speed: 2.5
   attackRange: 0.5
 --- !u!50 &2671878008326455976
 Rigidbody2D:

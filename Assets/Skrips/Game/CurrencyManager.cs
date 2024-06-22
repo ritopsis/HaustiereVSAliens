@@ -10,8 +10,8 @@ public class CurrencyManager : NetworkBehaviour
     //private NetworkVariable<int> petCurrency = new NetworkVariable<int>();
     //private NetworkVariable<int> alienCurrency = new NetworkVariable<int>();
 
-    public int petCurrency = 10;
-    public int alienCurrency = 10;
+    public int petCurrency = 50;
+    public int alienCurrency = 50;
     public TMP_Text petCurrencyText; // Reference to the TextMeshPro component for pet currency
     public TMP_Text alienCurrencyText; // Reference to the TextMeshPro component for alien currency
 
@@ -31,7 +31,9 @@ public class CurrencyManager : NetworkBehaviour
 
     void Start()
     {
-        
+        petCurrencyText.text = petCurrency.ToString();
+        alienCurrencyText.text = alienCurrency.ToString();
+
     }
 
     

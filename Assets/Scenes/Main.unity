@@ -4972,8 +4972,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc2878da7c55b4a82797741929c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  petCurrency: 10
-  alienCurrency: 10
+  petCurrency: 50
+  alienCurrency: 50
   petCurrencyText: {fileID: 0}
   alienCurrencyText: {fileID: 892279566}
 --- !u!114 &892279566
@@ -8103,8 +8103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc2878da7c55b4a82797741929c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  petCurrency: 10
-  alienCurrency: 10
+  petCurrency: 50
+  alienCurrency: 50
   petCurrencyText: {fileID: 1520694564}
   alienCurrencyText: {fileID: 0}
 --- !u!114 &1520694564

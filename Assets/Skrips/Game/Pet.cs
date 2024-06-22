@@ -9,7 +9,7 @@ public class Pet : NetworkBehaviour
     public int health;
     public int cost;
     private Transform spawnPoint;
-    // event Action<Pet> OnDeath;
+   
 
 
     protected virtual void Start()

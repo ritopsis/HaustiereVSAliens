@@ -158,7 +158,7 @@ MonoBehaviour:
   graphics: {fileID: 3250201382009770116}
   damage: 1
   flySpeed: 3
-  rotateSpeed: 0
+  rotateSpeed: 1
 --- !u!114 &1930487147399728091
 MonoBehaviour:
   m_ObjectHideFlags: 0
