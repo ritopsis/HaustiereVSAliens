@@ -3323,6 +3323,7 @@ GameObject:
   - component: {fileID: 649439879}
   - component: {fileID: 649439881}
   - component: {fileID: 649439882}
+  - component: {fileID: 649439883}
   m_Layer: 0
   m_Name: _Scripts
   m_TagString: Untagged
@@ -3439,6 +3440,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2244b36078c797409ab098d4a46ff0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &649439883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649439876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfc2878da7c55b4a82797741929c9b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petCurrency: 50
+  alienCurrency: 50
+  petCurrencyText: {fileID: 1520694564}
+  alienCurrencyText: {fileID: 892279566}
 --- !u!1 &649683926 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4315433674794181511, guid: 3f5c9034a99d25840ad30bfbe72dbca6, type: 3}
@@ -4933,7 +4950,6 @@ GameObject:
   - component: {fileID: 892279564}
   - component: {fileID: 892279567}
   - component: {fileID: 892279566}
-  - component: {fileID: 892279565}
   m_Layer: 5
   m_Name: SlimeAmount
   m_TagString: Untagged
@@ -4960,22 +4976,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.84, y: 1.49}
   m_SizeDelta: {x: 74.16, y: 70}
   m_Pivot: {x: 2.8103185, y: 3.0685394}
---- !u!114 &892279565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 892279563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbfc2878da7c55b4a82797741929c9b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  petCurrency: 50
-  alienCurrency: 50
-  petCurrencyText: {fileID: 0}
-  alienCurrencyText: {fileID: 892279566}
 --- !u!114 &892279566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8064,7 +8064,6 @@ GameObject:
   - component: {fileID: 1520694562}
   - component: {fileID: 1520694565}
   - component: {fileID: 1520694564}
-  - component: {fileID: 1520694563}
   m_Layer: 5
   m_Name: SunAmount
   m_TagString: Untagged
@@ -8091,22 +8090,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.84, y: 1.49}
   m_SizeDelta: {x: 74.16, y: 70}
   m_Pivot: {x: 2.8103185, y: 3.0685394}
---- !u!114 &1520694563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520694561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbfc2878da7c55b4a82797741929c9b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  petCurrency: 50
-  alienCurrency: 50
-  petCurrencyText: {fileID: 1520694564}
-  alienCurrencyText: {fileID: 0}
 --- !u!114 &1520694564
 MonoBehaviour:
   m_ObjectHideFlags: 0
