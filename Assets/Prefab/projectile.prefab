@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   graphics: {fileID: 3250201382009770116}
-  damage: 1
+  damage: 5
   flySpeed: 3
   rotateSpeed: 1
 --- !u!114 &1930487147399728091

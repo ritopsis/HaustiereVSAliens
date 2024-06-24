@@ -130,6 +130,11 @@ public class Alien : NetworkBehaviour
         if (collider.CompareTag("Outbound"))
         {
             Debug.Log("Alien reached outbound");
+            Base house = collider.GetComponent<Base>();
+            if (house != null)
+            {
+                house.TakeDamage(attackPower);
+            }
             DestroyAlienClientRpc();
         }
     }

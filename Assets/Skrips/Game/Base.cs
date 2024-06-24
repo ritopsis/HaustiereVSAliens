@@ -1,29 +1,29 @@
 
 using UnityEngine;
 using Unity.Netcode;
+using TMPro;
 
 public class Base : NetworkBehaviour
 {
-    public int maxHealth = 100;
+    public int maxHealth;
     private NetworkVariable<int> currentHealth = new NetworkVariable<int>();
 
-    public HealthText healthText; // Reference to the HealthText script
+    public TMP_Text healthText; // Reference to the HealthText script
 
     void Start()
     {
-        if (IsServer)
-        {
-            currentHealth.Value = maxHealth;
-        }
-
-        currentHealth.OnValueChanged += OnHealthChanged;
+        
+        Debug.Log("base start");
+        currentHealth.Value = maxHealth;
         UpdateHealthText();
+        currentHealth.OnValueChanged += OnHealthChanged;
     }
 
     public void TakeDamage(int damage)
     {
         if (IsServer)
         {
+            Debug.Log("base take damage");
             currentHealth.Value -= damage;
             if (currentHealth.Value <= 0)
             {
@@ -43,12 +43,13 @@ public class Base : NetworkBehaviour
         UpdateHealthText();
     }
 
+
     void UpdateHealthText()
     {
-        if (healthText != null)
-        {
-            healthText.SetHealth(currentHealth.Value, maxHealth);
-        }
+    if (healthText != null)
+    {
+        healthText.text = $"{currentHealth.Value}/{maxHealth}";
+    }
     }
 }
 

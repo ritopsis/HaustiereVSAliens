@@ -21,7 +21,7 @@ public class SpawnerPet : NetworkBehaviour
         {
             spawnPoints.Add(obj.transform);
         }
-        Debug.Log("CurrencyManager.instance: " + CurrencyManager.instance == null);
+        
         CurrencyManager.instance.OnCurrencyChanged += UpdatePetCardsUI;
 
     }
