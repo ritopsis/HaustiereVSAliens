@@ -92,7 +92,8 @@ public class SpawnerPet : NetworkBehaviour
         CurrencyManager.instance.SubtractPetCurrency(petObject.cost);
 
         Transform spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
-        spawnPoint.gameObject.SetActive(false);
+        //pet.transform.SetParent(spawnPoint, false); // Set pet as child of the spawn point
+        //spawnPoint.gameObject.SetActive(false);
 
         petObject.Init(spawnPoint);
 
@@ -110,6 +111,7 @@ public class SpawnerPet : NetworkBehaviour
         spawnPoint.gameObject.SetActive(false);
 
         var pet = NetworkManager.Singleton.SpawnManager.SpawnedObjects[petNetworkObjectId].GetComponent<Pet>();
+       // pet.transform.SetParent(spawnPoint, false); // Set pet as child of the spawn point
         pet.Init(spawnPoint);
         DeselectPets();
 

@@ -115,7 +115,7 @@ public class SpawnerAlien : NetworkBehaviour
         CurrencyManager.instance.SubtractAlienCurrency(alienObject.cost);
 
         Transform spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
-        spawnPoint.gameObject.SetActive(false);
+        //spawnPoint.gameObject.SetActive(false);
 
         alien.GetComponent<Alien>().Init(spawnPoint);
 
@@ -133,11 +133,15 @@ public class SpawnerAlien : NetworkBehaviour
     void SpawnAlienClientRpc(int id, Vector3 position, ulong spawnPointId)
     {
         Transform spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
-        spawnPoint.gameObject.SetActive(false);
+        if (aliensPrefabs[spawnID].name == "DittoAlien")
+        {
+            spawnPoint.gameObject.SetActive(false);
+        }
+        
 
-        CurrencyManager.instance.SubtractAlienCurrency(
-            aliensPrefabs[id].GetComponent<Alien>().cost
-        );
+        //CurrencyManager.instance.SubtractAlienCurrency(
+        //    aliensPrefabs[id].GetComponent<Alien>().cost
+        //);
         DeselectAliens();
     }
 

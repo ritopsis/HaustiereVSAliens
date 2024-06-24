@@ -35,7 +35,7 @@ public class DittoAlien : Alien
         Vector3 spawnPosition = transform.position + spawnOffset;
         GameObject slime = Instantiate(slimePrefab, spawnPosition, Quaternion.identity);
         slime.GetComponent<NetworkObject>().Spawn();
-        CurrencyManager.instance.AddAlienCurrency(amount);
+        //CurrencyManager.instance.AddAlienCurrency(amount);
         Debug.Log("produced slime serverRpC: " + slime);
         Destroy(slime, slimeLifetime);
 
