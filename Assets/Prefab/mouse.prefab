@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1252106306611393250}
   - component: {fileID: 1124494458351811343}
   - component: {fileID: -8897380520544014296}
+  - component: {fileID: 4100666864502905627}
   - component: {fileID: -2450334358853177439}
   - component: {fileID: 2550448322232510771}
   m_Layer: 0
@@ -122,6 +123,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 20
   cost: 15
+--- !u!114 &4100666864502905627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3664694891473496737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae5e75b37d77f247a2548cb642444a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  cost: 15
+  attackPower: 10
+  attackRange: 1.5
+  attackInterval: 1
 --- !u!61 &-2450334358853177439
 BoxCollider2D:
   m_ObjectHideFlags: 0
