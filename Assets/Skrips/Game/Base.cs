@@ -35,6 +35,8 @@ public class Base : NetworkBehaviour
     void DestroyBase()
     {
         Debug.Log(gameObject.name + " has been destroyed!");
+
+        NotifyGameManager();
         // Add additional logic for when the base is destroyed
     }
 
@@ -51,7 +53,15 @@ public class Base : NetworkBehaviour
         healthText.text = $"{currentHealth.Value}/{maxHealth}";
     }
     }
+
+
+    void NotifyGameManager()
+    {
+        GameManager.Instance.BaseDestroyed(this);
+    }
 }
+
+
 
 
 /*public class Base : MonoBehaviour

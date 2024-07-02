@@ -20,11 +20,11 @@ public class PlayerNamesManager : MonoBehaviour
 
     private void Update()
     {
-        if (LobbyManager.instance.updateUI)
+       /* if (LobbyManager.instance.updateUI)
         {
             UpdatePlayerNames();
             LobbyManager.instance.updateUI = false;
-        }
+        }*/
     }
 
     public void UpdatePlayerNames()

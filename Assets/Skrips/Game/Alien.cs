@@ -128,7 +128,7 @@ public class Alien : NetworkBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Outbound"))
+        if (collider.CompareTag("House"))
         {
             Debug.Log("Alien reached outbound");
             Base house = collider.GetComponent<Base>();

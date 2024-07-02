@@ -7,6 +7,7 @@ public class Projectile : NetworkBehaviour
 {
     public Transform graphics;
     public int damage;
+
     public float flySpeed, rotateSpeed;
     private Transform target;
 
@@ -35,7 +36,7 @@ public class Projectile : NetworkBehaviour
             }
         }
 
-        if (collider.CompareTag("Outbound"))
+        if (collider.CompareTag("UFO"))
         {
             Debug.Log("Mothership hit");
             Base mothership = collider.GetComponent<Base>();

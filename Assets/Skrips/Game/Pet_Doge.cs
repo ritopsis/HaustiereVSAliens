@@ -38,7 +38,7 @@ public class Pet_Doge : Pet
 
         foreach (Collider2D target in hitTargets)
         {
-            if ((target.CompareTag("Alien") || target.CompareTag("Outbound")) && target.transform.position.x > transform.position.x)
+            if ((target.CompareTag("Alien") || target.CompareTag("UFO")) && target.transform.position.x > transform.position.x)
             {
                 FireProjectileServerRpc(target.GetComponent<NetworkObject>().NetworkObjectId);
                 lastAttackTime = Time.time;

@@ -70,7 +70,27 @@ public class SpawnerAlien : NetworkBehaviour
                 
             }
 
-            if (selectedSpawnPoint != null && selectedSpawnPoint.gameObject.activeInHierarchy && CanSpawn())
+              if (selectedSpawnPoint != null && selectedSpawnPoint.gameObject.activeInHierarchy && CanSpawn())
+            {
+                Alien alien = aliensPrefabs[spawnID].GetComponent<Alien>();
+                if (CurrencyManager.instance.GetAlienCurrency() >= alien.cost)
+                {
+                    if (CanSpawnOnPoint(selectedSpawnPoint))
+                    {
+                        RequestSpawnAlienServerRpc(spawnID, selectedSpawnPoint.position, selectedSpawnPoint.GetComponent<NetworkObject>().NetworkObjectId);
+                    }
+                    else
+                    {
+                        Debug.Log("Cannot spawn Ditto on another Ditto or insufficient currency.");
+                    }
+                }
+                else
+                {
+                    Debug.Log("Not enough currency to spawn this pet which costs " + alien.cost + " and you have " + CurrencyManager.instance.GetAlienCurrency());
+                }
+            }
+
+           /* if (selectedSpawnPoint != null && selectedSpawnPoint.gameObject.activeInHierarchy && CanSpawn())
             {
 
                 if (CanSpawnDitto(selectedSpawnPoint))
@@ -86,8 +106,18 @@ public class SpawnerAlien : NetworkBehaviour
                         Debug.Log("Not enough currency to spawn this pet which costs " + alien.cost + " and you have " + CurrencyManager.instance.GetAlienCurrency());
                     }
                 }
-            }
+            }*/
         }
+    }
+
+
+        bool CanSpawnOnPoint(Transform spawnPoint)
+    {
+        if (aliensPrefabs[spawnID].name == "DittoAlien")
+        {
+            return !dittoAliens.ContainsKey(spawnPoint) || dittoAliens[spawnPoint] == null;
+        }
+        return true;
     }
 
     bool CanSpawnDitto(Transform spawnPoint)
@@ -135,7 +165,8 @@ public class SpawnerAlien : NetworkBehaviour
         Transform spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
         if (aliensPrefabs[spawnID].name == "DittoAlien")
         {
-            spawnPoint.gameObject.SetActive(false);
+            //spawnPoint.gameObject.SetActive(false);
+            dittoAliens[spawnPoint] = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].gameObject;
         }
         
 
@@ -167,6 +198,11 @@ public class SpawnerAlien : NetworkBehaviour
     {
         var spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
         spawnPoint.gameObject.SetActive(true);
+
+        if (dittoAliens.ContainsKey(spawnPoint))
+        {
+            dittoAliens[spawnPoint] = null;
+        }
     }
 
     public void UpdatePetCardsUI()
