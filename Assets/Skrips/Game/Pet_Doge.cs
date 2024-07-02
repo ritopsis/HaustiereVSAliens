@@ -6,10 +6,11 @@ using Unity.Netcode;
 public class Pet_Doge : Pet
 {
     public GameObject projectilePrefab; // Prefab of the projectile to shoot
-    public float attackCooldown = 1f; // Time between attacks
-    public float attackRange = 10f; // Range within which the doge can attack
-    public int attackPower = 10; // Attack power of the doge
+    public float attackCooldown; // Time between attacks
+    public float attackRange; // Range within which the doge can attack
+    public int attackPower; // Attack power of the doge
     private float lastAttackTime;
+    
 
     // Start is called before the first frame update
     protected override void Start()

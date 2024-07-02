@@ -8,6 +8,7 @@ public class Alien : NetworkBehaviour
     public int health;
     public int cost;
     public int attackPower = 10; // Attack power of the alien
+    public int houseAttackPower; // Attack power when kamikazeing
     private Transform spawnPoint;
 
     public float speed = 2f;
@@ -133,7 +134,7 @@ public class Alien : NetworkBehaviour
             Base house = collider.GetComponent<Base>();
             if (house != null)
             {
-                house.TakeDamage(attackPower);
+                house.TakeDamage(houseAttackPower);
             }
             DestroyAlienClientRpc();
         }

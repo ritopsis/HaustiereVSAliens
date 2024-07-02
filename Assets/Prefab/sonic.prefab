@@ -123,6 +123,7 @@ MonoBehaviour:
   health: 25
   cost: 15
   attackPower: 10
+  houseAttackPower: 50
   speed: 2.5
   attackRange: 0.5
 --- !u!50 &2671878008326455976

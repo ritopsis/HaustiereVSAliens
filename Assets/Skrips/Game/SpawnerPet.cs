@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -93,7 +92,7 @@ public class SpawnerPet : NetworkBehaviour
 
         Transform spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
         //pet.transform.SetParent(spawnPoint, false); // Set pet as child of the spawn point
-        //spawnPoint.gameObject.SetActive(false);
+        spawnPoint.gameObject.SetActive(false);
 
         petObject.Init(spawnPoint);
 
