@@ -908,7 +908,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.370239, y: 463.04004}
+  m_AnchoredPosition: {x: -12.370361, y: 463.04004}
   m_SizeDelta: {x: -661.42, y: -926.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &156671425
@@ -1991,6 +1991,54 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4719668128502661463, guid: f9d793d0274adf245a37e3e28e7ee21d, type: 3}
   m_PrefabInstance: {fileID: 5144283377191942695}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &451919689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 451919691}
+  - component: {fileID: 451919690}
+  m_Layer: 0
+  m_Name: PlayerNamesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &451919690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451919689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c87bbd64083287843a1406bcaf2d31d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPlayerNameTMPPrefab: {fileID: 4371886719469869739, guid: 392198b0d21f3a840a6b3f0cc9273739, type: 3}
+  aliensPlayerNameTMPPrefab: {fileID: 653836267632317776, guid: 1d4a8f0fd1f07254e88ab3ef4fb453a4, type: 3}
+  petsPlayerNameParent: {fileID: 786270581}
+  aliensPlayerNameParent: {fileID: 786270581}
+--- !u!4 &451919691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451919689}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &460006852 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
@@ -3296,6 +3344,7 @@ GameObject:
   - component: {fileID: 649439881}
   - component: {fileID: 649439882}
   - component: {fileID: 649439883}
+  - component: {fileID: 649439884}
   m_Layer: 0
   m_Name: _Scripts
   m_TagString: Untagged
@@ -3428,6 +3477,24 @@ MonoBehaviour:
   alienCurrency: 50
   petCurrencyText: {fileID: 1520694564}
   alienCurrencyText: {fileID: 892279566}
+--- !u!114 &649439884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649439876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d72d26d4122504ca81bf11702e54cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petsPlayerNameTMPPrefab: {fileID: 0}
+  aliensPlayerNameTMPPrefab: {fileID: 0}
+  petsPlayerNameParent: {fileID: 0}
+  aliensPlayerNameParent: {fileID: 0}
+  petsPlayerNameUI: {fileID: 0}
+  aliensPlayerNameUI: {fileID: 0}
 --- !u!1 &649683926 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4315433674794181511, guid: 3f5c9034a99d25840ad30bfbe72dbca6, type: 3}
@@ -7207,7 +7274,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.370239, y: 463.04004}
+  m_AnchoredPosition: {x: -12.370361, y: 463.04004}
   m_SizeDelta: {x: -661.42, y: -926.08}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1368741749
@@ -13023,3 +13090,4 @@ SceneRoots:
   - {fileID: 3601154844045762311}
   - {fileID: 905907879}
   - {fileID: 1842663757}
+  - {fileID: 451919691}
