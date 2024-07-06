@@ -13,6 +13,7 @@ public class PlayerNamesManager : MonoBehaviour
     private GameObject aliensPlayerNameUI;
 
     private string oldName = CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value;
+    private string oldNameOther = CurrentGame.otherPlayer.Data[LobbyManager.KEY_USERNAME].Value;
 
     private void Start()
     {
@@ -22,7 +23,7 @@ public class PlayerNamesManager : MonoBehaviour
 
     private void Update()
     {
-        if(oldName != CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value)
+        if(oldName != CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value || oldNameOther != CurrentGame.otherPlayer.Data[LobbyManager.KEY_USERNAME].Value)
         {
             UpdatePlayerNames();
         }
@@ -67,5 +68,6 @@ public class PlayerNamesManager : MonoBehaviour
         }
         Debug.Log("UPDATING NAME");
         oldName = CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value;
+        oldNameOther = CurrentGame.otherPlayer.Data[LobbyManager.KEY_USERNAME].Value;
     }
 }
