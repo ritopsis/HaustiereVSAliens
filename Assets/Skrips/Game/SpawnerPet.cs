@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
+using UnityEngine.EventSystems;
+using System;
 
 public class SpawnerPet : NetworkBehaviour
 {
@@ -40,7 +42,7 @@ public class SpawnerPet : NetworkBehaviour
 
     void DetectSpawnPoint()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !IsPointerOverUITag())
         {
             var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePos.z = 0;
@@ -184,7 +186,27 @@ public class SpawnerPet : NetworkBehaviour
         }
     }
 
+    public bool IsPointerOverUITag() // to check if a pet was selected or if the player is trying to place a pet
+    {
+        string tag = "PetSelect";
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
+        // Raycast on UI-Elemente 
+        var raycastResults = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, raycastResults);
+
+        // check if it has the tag
+        foreach (var result in raycastResults)
+        {
+            if (result.gameObject.CompareTag(tag))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
 
 
