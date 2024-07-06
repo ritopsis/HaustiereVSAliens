@@ -12,6 +12,8 @@ public class PlayerNamesManager : MonoBehaviour
     private GameObject petsPlayerNameUI;
     private GameObject aliensPlayerNameUI;
 
+    private string oldName = CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value;
+
     private void Start()
     {
         // Force an initial update of player names
@@ -20,6 +22,10 @@ public class PlayerNamesManager : MonoBehaviour
 
     private void Update()
     {
+        if(oldName != CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value)
+        {
+            UpdatePlayerNames();
+        }
        /* if (LobbyManager.instance.updateUI)
         {
             UpdatePlayerNames();
@@ -40,15 +46,26 @@ public class PlayerNamesManager : MonoBehaviour
         }
 
         // Fetch current player names from CurrentGame
-        string petsPlayerName = CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value;
-        string aliensPlayerName = CurrentGame.otherPlayer.Data[LobbyManager.KEY_USERNAME].Value;
+        string currentPlayerName = CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value;
+        string otherPlayerName = CurrentGame.otherPlayer.Data[LobbyManager.KEY_USERNAME].Value;
 
-        // Instantiate and set the pets player name UI
-        petsPlayerNameUI = Instantiate(petsPlayerNameTMPPrefab, petsPlayerNameParent);
-        petsPlayerNameUI.GetComponent<TMP_Text>().text = petsPlayerName + "10000";
 
-        // Instantiate and set the aliens player name UI
-        aliensPlayerNameUI = Instantiate(aliensPlayerNameTMPPrefab, aliensPlayerNameParent);
-        aliensPlayerNameUI.GetComponent<TMP_Text>().text = aliensPlayerName + "10000";
+        if (CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value == LobbyManager.PlayerCharacter.Haustiere.ToString())
+        {
+            petsPlayerNameUI = Instantiate(petsPlayerNameTMPPrefab, petsPlayerNameParent);
+            petsPlayerNameUI.GetComponent<TMP_Text>().text = currentPlayerName;
+            aliensPlayerNameUI = Instantiate(aliensPlayerNameTMPPrefab, aliensPlayerNameParent);
+            aliensPlayerNameUI.GetComponent<TMP_Text>().text = otherPlayerName;
+        }
+        else
+        {
+            petsPlayerNameUI = Instantiate(petsPlayerNameTMPPrefab, petsPlayerNameParent);
+            petsPlayerNameUI.GetComponent<TMP_Text>().text = otherPlayerName;
+            aliensPlayerNameUI = Instantiate(aliensPlayerNameTMPPrefab, aliensPlayerNameParent);
+            aliensPlayerNameUI.GetComponent<TMP_Text>().text = currentPlayerName;
+
+        }
+        Debug.Log("UPDATING NAME");
+        oldName = CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value;
     }
 }
