@@ -1,9 +1,13 @@
 using UnityEngine;
 using Unity.Netcode;
+using UnityEngine.SceneManagement;
 
 public class GameManager : NetworkBehaviour
 {
     public static GameManager Instance;
+
+    public static string WinnerName = null; // Static variable to hold the winner's name
+
 
     private bool gameOver = false;
 
@@ -23,6 +27,9 @@ public class GameManager : NetworkBehaviour
     {
         if (IsServer && !gameOver)
         {
+
+            gameOver = true;
+
             // Assuming there are only two bases, one for each player
             if (destroyedBase.CompareTag("House"))
             {
@@ -46,9 +53,12 @@ public class GameManager : NetworkBehaviour
     private void DeclareWinnerClientRpc(string winner)
     {
         // Display winner to all clients
+
+        WinnerName = winner;
         Debug.Log(winner + " wins!");
         UIManager.Instance.DisplayWinner(winner);
-        PauseGame();
+        //PauseGame();
+        LoadEndScene();
     }
 
     private void DeclareWinner(string winner)
@@ -59,5 +69,16 @@ public class GameManager : NetworkBehaviour
     private void PauseGame()
     {
         Time.timeScale = 0;
+    }
+
+      private void LoadEndScene()
+    {
+
+        Debug.Log("Loading EndScene...");
+        Time.timeScale = 1;
+        // Shutdown the network manager
+        NetworkManager.Singleton.Shutdown();
+        // Load the end scene
+        SceneManager.LoadScene("EndScene"); // Replace with your end scene name
     }
 }
