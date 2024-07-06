@@ -21,7 +21,8 @@ public class SpawnerAlien : NetworkBehaviour
     // List of spawn points (object containers)
     private List<Transform> spawnPoints;
     private Dictionary<Transform, GameObject> dittoAliens = new Dictionary<Transform, GameObject>();
-
+    private string mouseclick;
+    List<GameObject> listOfObject = new List<GameObject>();
     void Start()
     {
         // Find all spawn points tagged with "AlienSpawn"
@@ -274,6 +275,41 @@ public class SpawnerAlien : NetworkBehaviour
 
         return false;
     }
+
+    public void WhatMouse(BaseEventData data)
+    {
+        PointerEventData pointerData = data as PointerEventData;
+        if (pointerData.button == PointerEventData.InputButton.Left)
+        {
+            mouseclick = "Left";
+        }
+        else if (pointerData.button == PointerEventData.InputButton.Right)
+        {
+            mouseclick = "Right";
+        }
+
+    }
+    public void Show(GameObject text)
+    {
+        if (mouseclick == "Right")
+        {
+            if (!listOfObject.Contains(text))
+            {
+                listOfObject.Add(text);
+                Debug.Log("added" + text);
+                text.SetActive(true);
+                StartCoroutine(DeactivateAfterTime(text, 5.0f)); // Deactivate after 5 seconds
+            }
+        }
+    }
+
+    private IEnumerator DeactivateAfterTime(GameObject text, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        text.SetActive(false);
+        listOfObject.Remove(text);
+    }
+
 }
 
 

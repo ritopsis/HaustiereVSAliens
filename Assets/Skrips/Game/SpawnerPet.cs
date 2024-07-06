@@ -4,15 +4,19 @@ using UnityEngine.UI;
 using Unity.Netcode;
 using UnityEngine.EventSystems;
 using System;
+using System.Collections;
 
 public class SpawnerPet : NetworkBehaviour
 {
+
     public List<GameObject> petsPrefabs;
     public List<Pet> pets;
     public Transform spawnPetRoot;
     public List<Image> petsUI;
     int spawnID = -1;
     private List<Transform> spawnPoints;
+    private string mouseclick;
+    List<GameObject> listOfObject = new List<GameObject>();
 
     void Start()
     {
@@ -180,12 +184,43 @@ public class SpawnerPet : NetworkBehaviour
                 {
                     petsUI[i].color = Color.white;
                 }
-            }
-            
-            
-            
+            }                     
         }
     }
+    public void WhatMouse(BaseEventData data)
+    {
+        PointerEventData pointerData = data as PointerEventData;
+        if (pointerData.button == PointerEventData.InputButton.Left)
+        {
+            mouseclick = "Left";
+        }
+        else if (pointerData.button == PointerEventData.InputButton.Right)
+        {
+            mouseclick = "Right";
+        }
+
+    }
+    public void Show(GameObject text)
+    {
+        if (mouseclick == "Right")
+        {
+            if(!listOfObject.Contains(text))
+            {
+                listOfObject.Add(text);
+                Debug.Log("added" + text);
+                text.SetActive(true);
+                StartCoroutine(DeactivateAfterTime(text, 5.0f)); // Deactivate after 5 seconds
+            }
+        }
+    }
+
+    private IEnumerator DeactivateAfterTime(GameObject text, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        text.SetActive(false);
+        listOfObject.Remove(text);
+    }
+
 
     public bool IsPointerOverUITag() // to check if a pet was selected or if the player is trying to place a pet
     {
