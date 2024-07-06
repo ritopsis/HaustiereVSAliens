@@ -27,6 +27,18 @@ public class Base : NetworkBehaviour
             currentHealth.Value -= damage;
             if (currentHealth.Value <= 0)
             {
+                if(gameObject.name == "House" && CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value == LobbyManager.PlayerCharacter.Haustiere.ToString())
+                {
+                    CurrentGame.win = false;
+                }
+                else if(gameObject.name == "UFO" && CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value == LobbyManager.PlayerCharacter.Aliens.ToString())
+                {
+                    CurrentGame.win = false;
+                }
+                else
+                {
+                    CurrentGame.win = true;
+                }
                 DestroyBase();
             }
         }

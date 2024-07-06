@@ -15,4 +15,6 @@ public class CurrentGame : MonoBehaviour
             { KEY_PLAYER_CHARACTER, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, PlayerCharacter.Aliens.ToString()) }});
 
     public static bool startGame;
+
+    public static bool win;
 }

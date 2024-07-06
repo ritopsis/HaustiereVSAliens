@@ -157,7 +157,7 @@ public class SpawnerAlien : NetworkBehaviour
 
         SpawnAlienClientRpc(id, position, spawnPointId);
 
-        //DeselectAliens();
+        DeselectAliens();
     }
 
     [ClientRpc]
@@ -174,7 +174,7 @@ public class SpawnerAlien : NetworkBehaviour
         //CurrencyManager.instance.SubtractAlienCurrency(
         //    aliensPrefabs[id].GetComponent<Alien>().cost
         //);
-       // DeselectAliens();
+        DeselectAliens();
     }
 
     void DeselectAliens()

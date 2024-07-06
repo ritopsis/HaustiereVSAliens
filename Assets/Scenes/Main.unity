@@ -2714,9 +2714,6 @@ MonoBehaviour:
   haustierplayer: {fileID: 0}
   alienCardsPanel: {fileID: 156671423}
   petCardsPanel: {fileID: 1368741747}
-  places: {fileID: 786270577}
-  col: {fileID: 11400000, guid: 9b6d4f7330f80d24884b3dfffb360a24, type: 2}
-  tri: {fileID: 6737787659288311241, guid: 9010ed68a89eeed45b96cd4fe13cfbf5, type: 3}
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0

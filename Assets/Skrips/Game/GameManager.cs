@@ -29,16 +29,23 @@ public class GameManager : NetworkBehaviour
         {
 
             gameOver = true;
-
+            if(CurrentGame.win)
+            {
+                DeclareWinner(CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value);
+            }
+            else
+            {
+                DeclareWinner(CurrentGame.otherPlayer.Data[LobbyManager.KEY_USERNAME].Value);
+            }
             // Assuming there are only two bases, one for each player
-            if (destroyedBase.CompareTag("House"))
+            /*if (destroyedBase.CompareTag("House"))
             {
                 DeclareWinner("Player 2");
             }
             else if (destroyedBase.CompareTag("UFO"))
             {
                 DeclareWinner("Player 1");
-            }
+            }*/
         }
     }
 

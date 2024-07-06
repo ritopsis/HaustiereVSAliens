@@ -117,6 +117,10 @@ public class Alien : NetworkBehaviour
         {
             FindObjectOfType<SpawnerAlien>().NotifyDittoDeath(spawnPoint);
         }
+        if(IsServer)
+        {
+            CurrencyManager.instance.AddPetCurrency(2);
+        }
         DestroyAlienClientRpc();
     }
 

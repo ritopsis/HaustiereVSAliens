@@ -44,7 +44,8 @@ public class Pet : NetworkBehaviour
     {
         Debug.Log("Pet died");
         if (IsServer)
-        {
+        {    
+            CurrencyManager.instance.AddAlienCurrency(2);
             FindObjectOfType<SpawnerPet>().RevertSpawnPointServerRpc(spawnPoint.GetComponent<NetworkObject>().NetworkObjectId);
             Destroy(gameObject);
         }
