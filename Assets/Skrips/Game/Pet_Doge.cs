@@ -46,21 +46,35 @@ public class Pet_Doge : Pet
             }
         }
     }
-
     [ServerRpc]
     void FireProjectileServerRpc(ulong targetNetworkObjectId)
     {
-        FireProjectileClientRpc(targetNetworkObjectId);
-    }
-
-    [ClientRpc]
-    void FireProjectileClientRpc(ulong targetNetworkObjectId)
-    {
+        // Instantiate the projectile on the server
         var target = NetworkManager.Singleton.SpawnManager.SpawnedObjects[targetNetworkObjectId].transform;
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         projectile.GetComponent<NetworkObject>().Spawn();
         projectile.GetComponent<Projectile>().Initialize(target);
         projectile.GetComponent<Projectile>().Init(attackPower);
+
+        // Get the projectile's network object ID
+        ulong projectileNetworkObjectId = projectile.GetComponent<NetworkObject>().NetworkObjectId;
+
+        // Inform clients to initialize the projectile
+        FireProjectileClientRpc(targetNetworkObjectId, projectileNetworkObjectId);
+    }
+
+    [ClientRpc]
+    void FireProjectileClientRpc(ulong targetNetworkObjectId, ulong projectileNetworkObjectId)
+    {
+        // Get the target transform on the client
+        var target = NetworkManager.Singleton.SpawnManager.SpawnedObjects[targetNetworkObjectId].transform;
+
+        // Get the instantiated projectile on the client using its network object ID
+        var projectile = NetworkManager.Singleton.SpawnManager.SpawnedObjects[projectileNetworkObjectId].GetComponent<Projectile>();
+
+        // Perform client-specific initialization
+        projectile.Initialize(target);
+        projectile.Init(attackPower);
     }
 
     void OnDrawGizmosSelected()
