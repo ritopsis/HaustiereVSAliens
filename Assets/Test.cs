@@ -23,19 +23,16 @@ public class Test : NetworkBehaviour
     {
         count = 0;
     }
+    public void Update()
+    {
+        if(CurrentGame.startGame)
+        {
+            gameStart();
+            CurrentGame.startGame = false;
+        }
+    }
     public void gameStart()
     {
-
-        if (CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value == LobbyManager.PlayerCharacter.Haustiere.ToString())
-        {
-            //haustierplayer.text = CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value;
-            //alienplayer.text = CurrentGame.otherPlayer.Data[LobbyManager.KEY_USERNAME].Value;
-        }
-        else
-        {
-            //alienplayer.text = CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value;
-            //haustierplayer.text = CurrentGame.otherPlayer.Data[LobbyManager.KEY_USERNAME].Value;
-        }
 
         loadTroopsPanel();
         Debug.Log("Test.cs: Start method");
@@ -44,14 +41,12 @@ public class Test : NetworkBehaviour
     public void starthost()
     {
         Debug.Log("start");
-        NetworkManager.Singleton.StartHost();
         CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value = LobbyManager.PlayerCharacter.Haustiere.ToString();
         CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value = "Host";
         gameStart();
     }
     public void startclient()
     {
-        NetworkManager.Singleton.StartClient();
         CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value = LobbyManager.PlayerCharacter.Aliens.ToString();
         CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value = "Client";
         gameStart();

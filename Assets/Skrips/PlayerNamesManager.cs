@@ -45,10 +45,10 @@ public class PlayerNamesManager : MonoBehaviour
 
         // Instantiate and set the pets player name UI
         petsPlayerNameUI = Instantiate(petsPlayerNameTMPPrefab, petsPlayerNameParent);
-        petsPlayerNameUI.GetComponent<TMP_Text>().text = petsPlayerName;
+        petsPlayerNameUI.GetComponent<TMP_Text>().text = petsPlayerName + "10000";
 
         // Instantiate and set the aliens player name UI
         aliensPlayerNameUI = Instantiate(aliensPlayerNameTMPPrefab, aliensPlayerNameParent);
-        aliensPlayerNameUI.GetComponent<TMP_Text>().text = aliensPlayerName;
+        aliensPlayerNameUI.GetComponent<TMP_Text>().text = aliensPlayerName + "10000";
     }
 }

@@ -5,6 +5,7 @@ using Unity.Services.Authentication;
 using Unity.Services.Core;
 using Unity.Services.Lobbies;
 using Unity.Services.Lobbies.Models;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -39,6 +40,8 @@ public class LobbyManager : MonoBehaviour
     public string username { get; private set; }
     public string playerId { get; private set; }
 
+    public GameObject canves;
+
     public QueryResponse lobbies { get; private set; } //response of the current lobby request -> to display in UI
     public Lobby activeLobby { get; private set; }
     public bool lobbyjoining = false; //after trying to join a lobby = true
@@ -58,7 +61,9 @@ public class LobbyManager : MonoBehaviour
         //HandleRefreshLobbyList();
         if (gamestart)
         {
-            SceneManager.LoadScene("Main");
+            CurrentGame.startGame = true;
+            canves.SetActive(false);
+            //SceneManager.LoadScene("Main");
             activeLobby = null;
         }
     }

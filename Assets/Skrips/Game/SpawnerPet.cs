@@ -29,7 +29,7 @@ public class SpawnerPet : NetworkBehaviour
 
     void Update()
     {
-        if (IsServer && CanSpawn())
+        if (IsClient && CanSpawn())
         {
             DetectSpawnPoint();
         }
@@ -82,7 +82,7 @@ public class SpawnerPet : NetworkBehaviour
         }
     }
 
-    [ServerRpc]
+    [ServerRpc(RequireOwnership = false)]
     void RequestSpawnPetServerRpc(int id, Vector3 position, ulong spawnPointId)
     {
         GameObject pet = Instantiate(petsPrefabs[id], position, Quaternion.identity, spawnPetRoot);
@@ -114,6 +114,7 @@ public class SpawnerPet : NetworkBehaviour
         var pet = NetworkManager.Singleton.SpawnManager.SpawnedObjects[petNetworkObjectId].GetComponent<Pet>();
        // pet.transform.SetParent(spawnPoint, false); // Set pet as child of the spawn point
         pet.Init(spawnPoint);
+        Debug.Log("Okay aber was jetzt?");
         DeselectPets();
 
     }
