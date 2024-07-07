@@ -23,6 +23,7 @@ public class LobbyUI : MonoBehaviour
     public GameObject Player2HaustiereKick;
     public GameObject Player2AliensKick;
 
+    public GameObject StartGameButton;
 
     private void Awake()
     {
@@ -160,11 +161,16 @@ public class LobbyUI : MonoBehaviour
             Hide(Player2Aliens);
             Hide(Player2HaustiereKick);
             Hide(Player2AliensKick);
+            Hide(StartGameButton);
             int count = 1;
             Text lobbyname = MyLobby.transform.Find("Name").GetComponent<Text>();
             if (lobbyname != null)
             {
                 lobbyname.text = LobbyManager.instance.activeLobby.Name;
+            }
+            if (LobbyManager.instance.IsLobbyHost()) //only host can startgame
+            {
+                Show(StartGameButton);
             }
             foreach (Player player in LobbyManager.instance.activeLobby.Players)
             {
