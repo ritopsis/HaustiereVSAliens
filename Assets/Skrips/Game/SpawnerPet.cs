@@ -18,6 +18,10 @@ public class SpawnerPet : NetworkBehaviour
     private string mouseclick;
     List<GameObject> listOfObject = new List<GameObject>();
 
+    private Dictionary<Transform, GameObject> spawnedPets = new Dictionary<Transform, GameObject>();
+    public Button removeButton; 
+    public Image removeButtonImage; // Reference to the Remove button image
+    private bool isRemoveMode = false;
     void Start()
     {
         GameObject[] spawnPointObjects = GameObject.FindGameObjectsWithTag("PetSpawn");
@@ -29,19 +33,28 @@ public class SpawnerPet : NetworkBehaviour
         
         CurrencyManager.instance.OnCurrencyChanged += UpdatePetCardsUI;
 
+
+
     }
 
     void Update()
     {
-        if (IsClient && CanSpawn())
+        //if (IsClient && CanSpawn())
+        if (IsClient && CanSpawnOrRemove())
         {
             DetectSpawnPoint();
         }
     }
 
+    bool CanSpawnOrRemove()
+    {
+        return spawnID != -1 || isRemoveMode;
+    }
+
     bool CanSpawn()
     {
-        return spawnID != -1;
+        //return spawnID != -1;
+        return spawnID != -1 && !isRemoveMode;
     }
 
     void DetectSpawnPoint()
@@ -67,21 +80,29 @@ public class SpawnerPet : NetworkBehaviour
 
             if (selectedSpawnPoint != null && selectedSpawnPoint.gameObject.activeInHierarchy && CanSpawn())
             {
-                Pet pet = petsPrefabs[spawnID].GetComponent<Pet>();
-                if (CurrencyManager.instance.GetPetCurrency() >= pet.cost)
+                if (isRemoveMode)
                 {
-                    RequestSpawnPetServerRpc(spawnID, selectedSpawnPoint.position, selectedSpawnPoint.GetComponent<NetworkObject>().NetworkObjectId);
-                    Debug.Log("removed spawn point: " + selectedSpawnPoint.gameObject.name);
+                    RemovePetFromPoint(selectedSpawnPoint);
+                }
+                else if (CanSpawn())
+                {
+                
+                    Pet pet = petsPrefabs[spawnID].GetComponent<Pet>();
+                    if (CurrencyManager.instance.GetPetCurrency() >= pet.cost)
+                    {
+                        RequestSpawnPetServerRpc(spawnID, selectedSpawnPoint.position, selectedSpawnPoint.GetComponent<NetworkObject>().NetworkObjectId);
+                        Debug.Log("removed spawn point: " + selectedSpawnPoint.gameObject.name);
                     
                     
-                    //selectedSpawnPoint.gameObject.SetActive(false);
-                    Debug.Log("is Point active: " + selectedSpawnPoint.gameObject.activeInHierarchy);
-                }
-                else
-                {
-                    Debug.Log("Not enough currency to spawn this pet which costs " + pet.cost + " and you have " + CurrencyManager.instance.GetPetCurrency());
-                }
+                        //selectedSpawnPoint.gameObject.SetActive(false);
+                        Debug.Log("is Point active: " + selectedSpawnPoint.gameObject.activeInHierarchy);
+                    }
+                    else
+                    {
+                        Debug.Log("Not enough currency to spawn this pet which costs " + pet.cost + " and you have " + CurrencyManager.instance.GetPetCurrency());
+                    }
               
+                }
             }
         }
     }
@@ -95,9 +116,11 @@ public class SpawnerPet : NetworkBehaviour
 
         Pet petObject = pet.GetComponent<Pet>();
         CurrencyManager.instance.SubtractPetCurrency(petObject.cost);
+        
 
         Transform spawnPoint = NetworkManager.Singleton.SpawnManager.SpawnedObjects[spawnPointId].transform;
         //pet.transform.SetParent(spawnPoint, false); // Set pet as child of the spawn point
+        spawnedPets[spawnPoint] = pet; //Keep track which pet is spawned
         spawnPoint.gameObject.SetActive(false);
 
         petObject.Init(spawnPoint);
@@ -117,6 +140,7 @@ public class SpawnerPet : NetworkBehaviour
 
         var pet = NetworkManager.Singleton.SpawnManager.SpawnedObjects[petNetworkObjectId].GetComponent<Pet>();
        // pet.transform.SetParent(spawnPoint, false); // Set pet as child of the spawn point
+        
         pet.Init(spawnPoint);
         Debug.Log("Okay aber was jetzt?");
         DeselectPets();
@@ -170,7 +194,7 @@ public class SpawnerPet : NetworkBehaviour
 
     public void SelectPet(int id)
     {
-        if (id >= 0 && id < petsPrefabs.Count)
+        /*if (id >= 0 && id < petsPrefabs.Count)
         {
             
             spawnID = id;
@@ -185,8 +209,22 @@ public class SpawnerPet : NetworkBehaviour
                     petsUI[i].color = Color.white;
                 }
             }                     
+        }*/
+
+        spawnID = id;
+        isRemoveMode = (id == -1);
+        
+        for (int i = 0; i < petsUI.Count; i++)
+        {
+            petsUI[i].color = (i == id) ? Color.green : Color.white;
+        }
+
+        if (removeButtonImage != null)
+        {
+            removeButtonImage.color = isRemoveMode ? Color.red : Color.white;
         }
     }
+    
     public void WhatMouse(BaseEventData data)
     {
         PointerEventData pointerData = data as PointerEventData;
@@ -243,6 +281,33 @@ public class SpawnerPet : NetworkBehaviour
 
         return false;
     }
+
+    void RemovePetFromPoint(Transform spawnPoint)
+    {
+        if (spawnedPets.ContainsKey(spawnPoint) && spawnedPets[spawnPoint] != null)
+        {
+            RequestRemovePetServerRpc(spawnPoint.GetComponent<NetworkObject>().NetworkObjectId);
+        }
+    }
+
+    
+    [ServerRpc(RequireOwnership = false)]
+    void RequestRemovePetServerRpc(ulong petNetworkObjectId)
+    {
+        if (NetworkManager.Singleton.SpawnManager.SpawnedObjects.TryGetValue(petNetworkObjectId, out var networkObject))
+        {
+            Transform spawnPoint = networkObject.transform.parent;
+            if (spawnedPets.ContainsKey(spawnPoint) && spawnedPets[spawnPoint] != null)
+            {
+                GameObject pet = spawnedPets[spawnPoint];
+                spawnedPets.Remove(spawnPoint);
+                Destroy(pet);
+                RevertSpawnPointServerRpc(spawnPoint.GetComponent<NetworkObject>().NetworkObjectId); // Revert the spawn point
+            }
+        }
+    }
+
+    
 }
 
 
