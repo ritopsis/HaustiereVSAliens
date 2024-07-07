@@ -1028,8 +1028,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1001 &162352438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1168,8 +1168,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &210352013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,8 +1466,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &249094458
 GameObject:
   m_ObjectHideFlags: 0
@@ -2098,8 +2098,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &285076402
 GameObject:
   m_ObjectHideFlags: 0
@@ -2751,8 +2751,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1001 &375358103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2891,8 +2891,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1001 &376247393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3031,8 +3031,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1001 &388119185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3171,8 +3171,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &397040684
 GameObject:
   m_ObjectHideFlags: 0
@@ -4011,8 +4011,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &479515350
 GameObject:
   m_ObjectHideFlags: 0
@@ -4231,8 +4231,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1001 &485675446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5093,8 +5093,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &558857147
 GameObject:
   m_ObjectHideFlags: 0
@@ -5587,8 +5587,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1001 &609423261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5727,8 +5727,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &624837141
 GameObject:
   m_ObjectHideFlags: 0
@@ -7483,8 +7483,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1001 &885148241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7749,8 +7749,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &892412247
 GameObject:
   m_ObjectHideFlags: 0
@@ -7923,8 +7923,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &906447416
 GameObject:
   m_ObjectHideFlags: 0
@@ -8406,8 +8406,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1001 &952893575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9164,8 +9164,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &993167043
 GameObject:
   m_ObjectHideFlags: 0
@@ -9233,8 +9233,8 @@ MonoBehaviour:
   - {fileID: 583188467}
   - {fileID: 2052432400}
   - {fileID: 1242681663}
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!114 &993167047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10691,8 +10691,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &1189628385
 GameObject:
   m_ObjectHideFlags: 0
@@ -11752,8 +11752,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &1291456632
 GameObject:
   m_ObjectHideFlags: 0
@@ -12884,8 +12884,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &1630571917
 GameObject:
   m_ObjectHideFlags: 0
@@ -13278,8 +13278,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &1693781453
 GameObject:
   m_ObjectHideFlags: 0
@@ -13783,8 +13783,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1001 &1773472514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14126,8 +14126,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &1819906518
 GameObject:
   m_ObjectHideFlags: 0
@@ -14345,8 +14345,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &1824757727
 GameObject:
   m_ObjectHideFlags: 0
@@ -14690,8 +14690,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &1835342085
 GameObject:
   m_ObjectHideFlags: 0
@@ -15424,8 +15424,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &1885739902
 GameObject:
   m_ObjectHideFlags: 0
@@ -15714,8 +15714,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &1908209338
 GameObject:
   m_ObjectHideFlags: 0
@@ -16409,8 +16409,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1 &1989782234
 GameObject:
   m_ObjectHideFlags: 0
@@ -16856,8 +16856,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
-  removeButton: {fileID: 0}
-  removeButtonImage: {fileID: 0}
+  removeButton: {fileID: 1660769061}
+  removeButtonImage: {fileID: 1660769062}
 --- !u!1001 &2052432399
 PrefabInstance:
   m_ObjectHideFlags: 0

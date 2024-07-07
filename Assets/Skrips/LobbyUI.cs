@@ -238,6 +238,10 @@ public class LobbyUI : MonoBehaviour
             {
                 LobbyManager.instance.StartGame();
             }
+            else
+            {
+                clickable = true;
+            }
         }
     }
     public void Hide(GameObject gameobject)
