@@ -2323,6 +2323,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &495829643 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
@@ -2344,6 +2346,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1001 &510575928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3333,6 +3337,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &630595432 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
@@ -3385,6 +3391,8 @@ MonoBehaviour:
   - {fileID: 5624915686394543075}
   - {fileID: 5144283377191942697}
   - {fileID: 8466670912044919216}
+  removeButton: {fileID: 1873790863}
+  removeButtonImage: {fileID: 0}
 --- !u!4 &649439878
 Transform:
   m_ObjectHideFlags: 0
@@ -3521,6 +3529,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1001 &679039023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3654,6 +3664,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1001 &738112634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3913,6 +3925,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &786270577
 GameObject:
   m_ObjectHideFlags: 0
@@ -4383,6 +4397,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1001 &840622381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4516,6 +4532,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &871031046 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2105079940479837080, guid: b23a69790bd4ed04c8e42cea42741c6b, type: 3}
@@ -5452,6 +5470,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &1005124152 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
@@ -6159,6 +6179,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1001 &1330013832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6418,6 +6440,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &1368741747
 GameObject:
   m_ObjectHideFlags: 0
@@ -6453,6 +6477,7 @@ RectTransform:
   - {fileID: 5624915686394543074}
   - {fileID: 5144283377191942696}
   - {fileID: 8466670912044919215}
+  - {fileID: 1873790862}
   m_Father: {fileID: 786270581}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7088,6 +7113,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &1466702655 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
@@ -7447,6 +7474,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1001 &1541156963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7706,6 +7735,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &1553239143 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
@@ -7727,6 +7758,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &1559278789 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
@@ -7748,6 +7781,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!224 &1607661313 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8212836407768220142, guid: dd07d55385e2b2e4492ad8b1543fb050, type: 3}
@@ -7907,6 +7942,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1001 &1621052276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8040,6 +8077,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &1624555615 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7342787215092025626, guid: dd256ea310c37b7499a05684b217a648, type: 3}
@@ -8192,6 +8231,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &1763518784
 GameObject:
   m_ObjectHideFlags: 0
@@ -8459,6 +8500,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &1802694519 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
@@ -8480,6 +8523,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &1839510876
 GameObject:
   m_ObjectHideFlags: 0
@@ -8754,6 +8799,140 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
+--- !u!1 &1873790861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1873790862}
+  - component: {fileID: 1873790865}
+  - component: {fileID: 1873790864}
+  - component: {fileID: 1873790863}
+  m_Layer: 5
+  m_Name: removeButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1873790862
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873790861}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1368741748}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 718, y: -20}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1873790863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873790861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.735849, g: 0.05206478, b: 0.05206478, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1873790864}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 649439877}
+        m_TargetAssemblyTypeName: SpawnerPet, Assembly-CSharp
+        m_MethodName: SelectPet
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1873790864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873790861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 7a9e374666ad6cc47807bb001844f3d8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1873790865
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873790861}
+  m_CullTransparentMesh: 1
 --- !u!1 &1877175978 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
@@ -8775,6 +8954,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1001 &1882536530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8922,6 +9103,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &1918594492
 GameObject:
   m_ObjectHideFlags: 0
@@ -9203,6 +9386,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &1956883075 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 171248284569656806, guid: f5fcf3c0e7a758745a8fb00536b1c291, type: 3}
@@ -9224,6 +9409,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1001 &1958431887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9361,6 +9548,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &1966449732
 GameObject:
   m_ObjectHideFlags: 0
@@ -9516,6 +9705,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1 &2001780335 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4828285055811618666, guid: 3623401a18158174dbfaadecf5f04316, type: 3}
@@ -9658,6 +9849,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!224 &2056079227 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6133307832863781310, guid: 2de96f0e27cb9ca459b48fcb0ec01f87, type: 3}
@@ -10706,6 +10899,8 @@ MonoBehaviour:
   pets: []
   spawnPetRoot: {fileID: 0}
   petsUI: []
+  removeButton: {fileID: 0}
+  removeButtonImage: {fileID: 0}
 --- !u!1001 &8329624941241655693
 PrefabInstance:
   m_ObjectHideFlags: 0
