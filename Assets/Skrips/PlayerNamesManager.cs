@@ -27,6 +27,11 @@ public class PlayerNamesManager : MonoBehaviour
         {
             UpdatePlayerNames();
         }
+        if(CurrentGame.updateName)
+        {
+            UpdatePlayerNames();
+            CurrentGame.updateName = false;
+        }
        /* if (LobbyManager.instance.updateUI)
         {
             UpdatePlayerNames();

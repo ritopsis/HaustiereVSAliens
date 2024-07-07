@@ -61,10 +61,34 @@ public class LobbyManager : MonoBehaviour
         //HandleRefreshLobbyList();
         if (gamestart)
         {
+            if(IsLobbyHost() && CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value == CurrentGame.otherPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value)
+            {
+                if(CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value == LobbyManager.PlayerCharacter.Haustiere.ToString())
+                {
+                    CurrentGame.otherPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value = LobbyManager.PlayerCharacter.Aliens.ToString();
+                }
+                else
+                {
+                    CurrentGame.otherPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value = LobbyManager.PlayerCharacter.Haustiere.ToString();
+                }
+            }
+            if (!IsLobbyHost() && CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value == CurrentGame.otherPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value)
+            {
+                if (CurrentGame.otherPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value == LobbyManager.PlayerCharacter.Haustiere.ToString())
+                {
+                    CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value = LobbyManager.PlayerCharacter.Aliens.ToString();
+                }
+                else
+                {
+                    CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value = LobbyManager.PlayerCharacter.Haustiere.ToString();
+                }
+            }
+            CurrentGame.updateName = true;
             CurrentGame.startGame = true;
             canves.SetActive(false);
             //SceneManager.LoadScene("Main");
             activeLobby = null;
+            gamestart = false;
         }
     }
 

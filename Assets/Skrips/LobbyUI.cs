@@ -31,6 +31,7 @@ public class LobbyUI : MonoBehaviour
     }
     private void Update()
     {
+
         if (LobbyManager.instance.pullenlobby) {
             LobbyManager.instance.pullenlobby = false;
             UpdateLobbyUIItems();
@@ -44,6 +45,13 @@ public class LobbyUI : MonoBehaviour
         if (LobbyManager.instance.lobbyjoining) {
             LobbyManager.instance.lobbyjoining = false;
             LobbyJoining();
+        }
+        if (LobbyManager.instance.IsPlayerInLobby())
+        {
+            if(LobbyManager.instance.activeLobby.Players.Count == 1)
+            {
+                clickable = true;
+            }
         }
     }
     public void StillInLobby() //check is player is in lobby -> could be kicked from host
@@ -126,7 +134,8 @@ public class LobbyUI : MonoBehaviour
     }
     public void UpdatePlayerCharacter(string Text) //to switch between factions
     {
-        if(clickable)
+        Debug.Log("Warum update " + clickable);
+        if (clickable)
         {
             LobbyManager.PlayerCharacter character = LobbyManager.PlayerCharacter.Haustiere;
             if (Text == "Aliens")
@@ -149,7 +158,11 @@ public class LobbyUI : MonoBehaviour
     }
     public void KickPlayer() //kick player as host of the lobby
     {
-        LobbyManager.instance.KickPlayer(LobbyManager.instance.activeLobby.Players[1].Id); //Players[O] is LobbyOwner, 1 is Second Player
+        Debug.Log("Warum was " + clickable);
+        if(clickable)
+        {
+            LobbyManager.instance.KickPlayer(LobbyManager.instance.activeLobby.Players[1].Id); //Players[O] is LobbyOwner, 1 is Second Player
+        }
     }
     public void UpdatePlayerUI()
     {

@@ -17,4 +17,6 @@ public class CurrentGame : MonoBehaviour
     public static bool startGame;
 
     public static bool win;
+
+    public static bool updateName;
 }
