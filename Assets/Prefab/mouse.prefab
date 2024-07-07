@@ -138,7 +138,7 @@ MonoBehaviour:
   health: 20
   cost: 15
   attackPower: 10
-  attackRange: 1.5
+  attackRange: 1
   attackInterval: 1
 --- !u!61 &-2450334358853177439
 BoxCollider2D:

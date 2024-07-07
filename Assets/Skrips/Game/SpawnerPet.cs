@@ -317,6 +317,7 @@ public class SpawnerPet : NetworkBehaviour
                 Debug.Log("Server removing pet: " + networkObject.NetworkObjectId);
                 Destroy(networkObject.gameObject);
                 spawnedPets.Remove(spawnPoint);
+                CurrencyManager.instance.AddPetCurrency(5);
                 RevertSpawnPointServerRpc(spawnPoint.GetComponent<NetworkObject>().NetworkObjectId);
             }
         }
