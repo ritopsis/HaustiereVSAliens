@@ -43,8 +43,23 @@ public class Test : NetworkBehaviour
             alienCardsPanel.SetActive(true);
         }
     }
-    //Send Message To Server -> ServerRpc
-    //Send Message From Client to Server -> ClientRpc
+    public void starthost()
+    {
+        Debug.Log("start");
+        CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value = LobbyManager.PlayerCharacter.Haustiere.ToString();
+        CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value = "Host";
+        NetworkManager.Singleton.StartHost();
+        gameStart();
+    }
+    public void startclient()
+    {
+        CurrentGame.currentPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value = LobbyManager.PlayerCharacter.Aliens.ToString();
+        CurrentGame.currentPlayer.Data[LobbyManager.KEY_USERNAME].Value = "Client";
+        NetworkManager.Singleton.StartClient();
+        gameStart();
+        //Send Message To Server -> ServerRpc
+        //Send Message From Client to Server -> ClientRpc
 
+    }
 
-}
+   }
